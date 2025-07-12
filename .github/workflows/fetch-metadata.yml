@@ -30,18 +30,27 @@ jobs:
             -o temp/files.json
 
       - name: Generate metadata.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
         run: |
           node <<'EOF'
           const fs = require('fs');
           const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
           const files = JSON.parse(fs.readFileSync('temp/files.json'));
+      
+          const token = process.env.GITHUB_TOKEN;
+      
           (async () => {
             const output = [];
             for (const file of files) {
               if (!/\.(png|jpe?g|gif|webp|svg)$/i.test(file.name)) continue;
               const commits = await fetch(`https://api.github.com/repos/${process.env.GITHUB_REPOSITORY}/commits?path=${file.path}`, {
-                headers: { Authorization: 'token ' + process.env.MY_GITHUB_TOKEN }
+                headers: {
+                  Authorization: 'token ' + token,
+                  'User-Agent': 'metadata-script'
+                }
               }).then(r => r.json());
+      
               const latest = commits[0];
               output.push({
                 name: file.name,
@@ -51,9 +60,11 @@ jobs:
                 date: latest?.commit?.author?.date || null
               });
             }
+      
             fs.writeFileSync('metadata.json', JSON.stringify(output, null, 2));
           })();
           EOF
+
 
       - name: Commit metadata.json
         run: |
