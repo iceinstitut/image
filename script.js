@@ -30,7 +30,7 @@ function renderImages() {
   const endIndex = Math.min(startIndex + imagesPerPage, filtered.length);
 
   document.getElementById("total-count").textContent = 
-    \`Menampilkan \${endIndex - startIndex} dari \${filtered.length} gambar (halaman \${currentPage} dari \${totalPages || 1})\`;
+  `Menampilkan ${endIndex - startIndex} dari ${filtered.length} gambar (halaman ${currentPage} dari ${totalPages || 1})`;
 
   const paginated = filtered.slice(startIndex, endIndex);
 
