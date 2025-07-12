@@ -13,30 +13,38 @@ window.addEventListener('DOMContentLoaded', () => {
       renderImages();
     });
 
-  document.getElementById('search-input').addEventListener('input', () => {
-    currentPage = 1;
-    renderImages();
-  });
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      currentPage = 1;
+      renderImages();
+    });
+  }
 });
 
 function renderImages() {
   const container = document.getElementById('image-list');
+  if (!container) return;
+
   container.innerHTML = '';
-  const query = document.getElementById('search-input').value.toLowerCase();
+
+  const query = document.getElementById('search-input')?.value?.toLowerCase() || '';
   const filtered = allImages.filter(img => img.name.toLowerCase().includes(query));
 
   const totalPages = Math.ceil(filtered.length / imagesPerPage);
   const startIndex = (currentPage - 1) * imagesPerPage;
   const endIndex = Math.min(startIndex + imagesPerPage, filtered.length);
 
-  document.getElementById("total-count").textContent = 
-  `Menampilkan ${endIndex - startIndex} dari ${filtered.length} gambar (halaman ${currentPage} dari ${totalPages || 1})`;
+  const totalCount = document.getElementById('total-count');
+  if (totalCount) {
+    totalCount.textContent = `Menampilkan ${endIndex - startIndex} dari ${filtered.length} gambar (halaman ${currentPage} dari ${totalPages || 1})`;
+  }
 
   const paginated = filtered.slice(startIndex, endIndex);
 
   paginated.forEach((file, index) => {
-    const rawUrl = \`https://\${repoOwner}.github.io/\${repoName}/\${folderPath}/\${file.name}\`;
-    const inputId = \`input-url-\${index}\`;
+    const rawUrl = `https://${repoOwner}.github.io/${repoName}/${folderPath}/${file.name}`;
+    const inputId = `input-url-${startIndex + index}`;
     const fileSize = formatSize(file.size);
     const date = new Date(file.date);
     const formattedDate = date.toLocaleString('id-ID', {
@@ -48,45 +56,48 @@ function renderImages() {
     const col = document.createElement('div');
     col.className = 'col-md-6 col-lg-4';
 
-    col.innerHTML = \`
+    col.innerHTML = `
       <div class="card shadow-sm h-100">
         <div class="d-flex align-items-center justify-content-center p-3" style="height: 250px;">
-          <img loading="lazy" src="\${rawUrl}" alt="\${file.name}" class="img-fluid mh-100">
+          <img loading="lazy" src="${rawUrl}" alt="${file.name}" class="img-fluid mh-100">
         </div>
         <div class="card-body">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong>\${file.name}</strong></li>
-            <li class="list-group-item"><strong>Ekstensi:</strong> .\${file.extension}</li>
-            <li class="list-group-item"><strong>Ukuran:</strong> \${fileSize}</li>
-            <li class="list-group-item"><strong>Update Terakhir:</strong> \${formattedDate}</li>
+            <li class="list-group-item"><strong>${file.name}</strong></li>
+            <li class="list-group-item"><strong>Ekstensi:</strong> .${file.extension}</li>
+            <li class="list-group-item"><strong>Ukuran:</strong> ${fileSize}</li>
+            <li class="list-group-item"><strong>Update Terakhir:</strong> ${formattedDate}</li>
           </ul>
         </div>
         <div class="card-footer">
           <div class="input-group">
-            <button class="btn btn-outline-primary" type="button" onclick="copyToClipboard('\${inputId}', this)" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Copy URL">
+            <button class="btn btn-outline-primary" type="button" onclick="copyToClipboard('${inputId}', this)" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Copy URL">
               <i class="bi bi-clipboard-fill"></i>
             </button>
-            <input type="text" class="form-control" id="\${inputId}" value="\${rawUrl}" disabled readonly onclick="this.select()">
+            <input type="text" class="form-control" id="${inputId}" value="${rawUrl}" disabled readonly onclick="this.select()">
           </div>
         </div>
       </div>
-    \`;
+    `;
     container.appendChild(col);
-
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-    tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
   });
+
+  // Inisialisasi ulang tooltip
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
 
   renderPagination(totalPages);
 }
 
 function renderPagination(totalPages) {
   const pagination = document.getElementById('pagination');
+  if (!pagination) return;
   pagination.innerHTML = '';
+
   for (let i = 1; i <= totalPages; i++) {
     const li = document.createElement('li');
     li.className = 'page-item' + (i === currentPage ? ' active' : '');
-    li.innerHTML = \`<button class="page-link" onclick="gotoPage(\${i})">\${i}</button>\`;
+    li.innerHTML = `<button class="page-link" onclick="gotoPage(${i})">${i}</button>`;
     pagination.appendChild(li);
   }
 }
@@ -98,6 +109,8 @@ function gotoPage(page) {
 
 function copyToClipboard(inputId, button) {
   const input = document.getElementById(inputId);
+  if (!input) return;
+
   input.select();
   input.setSelectionRange(0, 99999);
   document.execCommand("copy");
@@ -115,7 +128,7 @@ function copyToClipboard(inputId, button) {
 }
 
 function formatSize(bytes) {
-  if (bytes < 1024) return \`\${bytes} B\`;
-  else if (bytes < 1024 * 1024) return \`\${(bytes / 1024).toFixed(1)} KB\`;
-  else return \`\${(bytes / (1024 * 1024)).toFixed(1)} MB\`;
+  if (bytes < 1024) return `${bytes} B`;
+  else if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  else return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
