@@ -54,6 +54,11 @@ jobs:
           })();
           EOF
 
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
       - name: Commit metadata.json
         run: |
           git config user.name "iceinstitut"
@@ -62,3 +67,4 @@ jobs:
           git commit -m "Update metadata.json" || echo "Nothing to commit"
           git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git push origin main
+
