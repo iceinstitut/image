@@ -19,15 +19,20 @@ jobs:
                https://api.github.com/repos/${{ github.repository }}/contents/aset \
                -o temp/files.json
 
-      - name: Process metadata with Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
-      - run: |
+          node-version: "18"
+
+      - name: Install node-fetch
+        run: npm install node-fetch
+
+      - name: Generate metadata.json
+        run: |
           node <<'EOF'
           const fs = require('fs');
-          const files = JSON.parse(fs.readFileSync('temp/files.json'));
           const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+          const files = JSON.parse(fs.readFileSync('temp/files.json'));
           (async () => {
             const output = [];
             for (const file of files) {
