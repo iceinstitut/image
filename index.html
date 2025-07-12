@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Hosting - iceinstitut</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f9f9f9; }
+    .img-box { margin-bottom: 30px; border: 1px solid #ddd; padding: 10px; background: #fff; }
+    img { max-width: 300px; display: block; margin-bottom: 10px; }
+    input { width: 100%; padding: 8px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h1>📁 Daftar Gambar di Repository</h1>
+  <p>Silakan klik kanan pada gambar atau copy link di bawahnya.</p>
+  <div id="image-list"></div>
+
+  <script>
+    const repoOwner = 'iceinstitut';
+    const repoName = 'image';
+
+    // GitHub API untuk list isi folder
+    fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/`)
+      .then(response => response.json())
+      .then(files => {
+        const container = document.getElementById('image-list');
+        files.forEach(file => {
+          if (file.type === 'file' && /\.(png|jpg|jpeg|gif|webp|svg)$/i.test(file.name)) {
+            const rawUrl = `https://${repoOwner}.github.io/${repoName}/${file.name}`;
+            const div = document.createElement('div');
+            div.className = 'img-box';
+            div.innerHTML = `
+              <img src="${rawUrl}" alt="${file.name}">
+              <input type="text" readonly value="${rawUrl}" onclick="this.select();">
+            `;
+            container.appendChild(div);
+          }
+        });
+      })
+      .catch(err => {
+        document.getElementById('image-list').innerText = 'Gagal memuat gambar. Pastikan repo public dan tidak kosong.';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
