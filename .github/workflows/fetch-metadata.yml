@@ -1,0 +1,58 @@
+name: Fetch Metadata
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  fetch-metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Fetch folder metadata
+        run: |
+          mkdir -p temp
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+               https://api.github.com/repos/${{ github.repository }}/contents/aset \
+               -o temp/files.json
+
+      - name: Process metadata with Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - run: |
+          node <<'EOF'
+          const fs = require('fs');
+          const files = JSON.parse(fs.readFileSync('temp/files.json'));
+          const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+          (async () => {
+            const output = [];
+            for (const file of files) {
+              if (!/\.(png|jpe?g|gif|webp|svg)$/i.test(file.name)) continue;
+              const commits = await fetch(`https://api.github.com/repos/${process.env.GITHUB_REPOSITORY}/commits?path=${file.path}`, {
+                headers: { Authorization: 'token ' + process.env.GITHUB_TOKEN }
+              }).then(r => r.json());
+              const latest = commits[0];
+              output.push({
+                name: file.name,
+                path: file.path,
+                size: file.size,
+                extension: file.name.split('.').pop(),
+                date: latest?.commit?.author?.date || null
+              });
+            }
+            fs.mkdirSync('image', { recursive: true });
+            fs.writeFileSync('image/metadata.json', JSON.stringify(output, null, 2));
+          })();
+          EOF
+
+      - name: Commit metadata.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add image/metadata.json
+          git commit -m "Update metadata.json" || echo "Nothing to commit"
+          git push
