@@ -9,29 +9,29 @@ jobs:
   fetch-metadata:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout repo
         uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install node-fetch
+        run: npm install node-fetch
 
       - name: Fetch folder metadata
         run: |
           mkdir -p temp
           curl -H "Authorization: token ${{ secrets.MY_GITHUB_TOKEN }}" \
-               https://api.github.com/repos/${{ github.repository }}/contents/aset \
-               -o temp/files.json
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18"
-
-      - name: Install node-fetch
-        run: npm install node-fetch
+            https://api.github.com/repos/${{ github.repository }}/contents/aset \
+            -o temp/files.json
 
       - name: Generate metadata.json
         run: |
           node <<'EOF'
           const fs = require('fs');
-          const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+          const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
           const files = JSON.parse(fs.readFileSync('temp/files.json'));
           (async () => {
             const output = [];
@@ -54,11 +54,11 @@ jobs:
           })();
           EOF
 
-        - name: Commit metadata.json
-          run: |
-            git config user.name "iceinstitut"
-            git config user.email "iceinstitut@users.noreply.github.com"
-            git add image/metadata.json
-            git commit -m "Update metadata.json" || echo "Nothing to commit"
-            git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-            git push origin main
+      - name: Commit metadata.json
+        run: |
+          git config user.name "iceinstitut"
+          git config user.email "iceinstitut@users.noreply.github.com"
+          git add image/metadata.json
+          git commit -m "Update metadata.json" || echo "Nothing to commit"
+          git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push origin main
