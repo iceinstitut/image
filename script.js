@@ -6,7 +6,7 @@ let currentPage = 1;
 let allImages = [];
 
 window.addEventListener('DOMContentLoaded', () => {
-  fetch('image/metadata.json')
+  fetch('metadata.json')
     .then(res => res.json())
     .then(data => {
       allImages = data;
