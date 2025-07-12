@@ -9,8 +9,10 @@ jobs:
   fetch-metadata:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout Repo
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -49,22 +51,15 @@ jobs:
                 date: latest?.commit?.author?.date || null
               });
             }
-            fs.mkdirSync('image', { recursive: true });
-            fs.writeFileSync('image/metadata.json', JSON.stringify(output, null, 2));
+            fs.writeFileSync('metadata.json', JSON.stringify(output, null, 2));
           })();
           EOF
-
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
 
       - name: Commit metadata.json
         run: |
           git config user.name "iceinstitut"
           git config user.email "iceinstitut@users.noreply.github.com"
-          git add image/metadata.json
+          git add metadata.json
           git commit -m "Update metadata.json" || echo "Nothing to commit"
           git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git push origin main
-
