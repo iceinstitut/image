@@ -74,7 +74,7 @@ function renderImages() {
             <button class="btn btn-outline-primary" type="button" onclick="copyToClipboard('${inputId}', this)" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Copy URL">
               <i class="bi bi-clipboard-fill"></i>
             </button>
-            <input type="text" class="form-control" id="${inputId}" value="${rawUrl}" disabled readonly onclick="this.select()">
+            <input type="text" class="form-control" id="${inputId}" value="${rawUrl}" readonly onclick="this.select()">
           </div>
         </div>
       </div>
@@ -111,20 +111,23 @@ function copyToClipboard(inputId, button) {
   const input = document.getElementById(inputId);
   if (!input) return;
 
-  input.select();
-  input.setSelectionRange(0, 99999);
-  document.execCommand("copy");
+  const text = input.value;
 
-  const original = button.innerHTML;
-  button.innerHTML = "<i class='bi bi-check-lg'></i>";
-  button.classList.remove("btn-outline-primary");
-  button.classList.add("btn-success");
+  navigator.clipboard.writeText(text).then(() => {
+    const original = button.innerHTML;
+    button.innerHTML = "<i class='bi bi-check-lg'></i>";
+    button.classList.remove("btn-outline-primary");
+    button.classList.add("btn-success");
 
-  setTimeout(() => {
-    button.innerHTML = original;
-    button.classList.add("btn-outline-primary");
-    button.classList.remove("btn-success");
-  }, 1500);
+    setTimeout(() => {
+      button.innerHTML = original;
+      button.classList.add("btn-outline-primary");
+      button.classList.remove("btn-success");
+    }, 1500);
+  }).catch(err => {
+    console.error('Gagal menyalin ke clipboard:', err);
+    alert('Tidak dapat menyalin ke clipboard. Coba salin manual.');
+  });
 }
 
 function formatSize(bytes) {
