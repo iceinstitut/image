@@ -1,10 +1,24 @@
 [
   {
+    "name": "bohai_ship-building_vocational_college.webp",
+    "path": "aset/bohai_ship-building_vocational_college.webp",
+    "size": 19074,
+    "extension": "webp",
+    "date": "2025-08-17T06:57:02Z"
+  },
+  {
     "name": "cover-default.jpg",
     "path": "aset/cover-default.jpg",
     "size": 117252,
     "extension": "jpg",
     "date": "2025-07-13T10:49:34Z"
+  },
+  {
+    "name": "dongbei_university_of_finance_and_economics_logo.png",
+    "path": "aset/dongbei_university_of_finance_and_economics_logo.png",
+    "size": 7461,
+    "extension": "png",
+    "date": "2025-08-17T06:50:58Z"
   },
   {
     "name": "ice-institute-logo-banner.png",
