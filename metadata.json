@@ -7,6 +7,20 @@
     "date": "2025-08-17T06:57:02Z"
   },
   {
+    "name": "chengdu-normal-university.jpeg",
+    "path": "aset/chengdu-normal-university.jpeg",
+    "size": 11737,
+    "extension": "jpeg",
+    "date": "2025-08-17T15:47:13Z"
+  },
+  {
+    "name": "communication-university-of-china.jpeg",
+    "path": "aset/communication-university-of-china.jpeg",
+    "size": 10905,
+    "extension": "jpeg",
+    "date": "2025-08-17T15:47:13Z"
+  },
+  {
     "name": "cover-default.jpg",
     "path": "aset/cover-default.jpg",
     "size": 117252,
@@ -49,10 +63,52 @@
     "date": "2025-07-12T14:52:42Z"
   },
   {
+    "name": "institute-for-the-future.png",
+    "path": "aset/institute-for-the-future.png",
+    "size": 4604,
+    "extension": "png",
+    "date": "2025-08-17T15:47:13Z"
+  },
+  {
+    "name": "southwestern-university-of-finance-and-economics.png",
+    "path": "aset/southwestern-university-of-finance-and-economics.png",
+    "size": 9581,
+    "extension": "png",
+    "date": "2025-08-17T15:47:13Z"
+  },
+  {
     "name": "sub-brand-micro.png",
     "path": "aset/sub-brand-micro.png",
     "size": 46579,
     "extension": "png",
     "date": "2025-07-13T03:38:04Z"
+  },
+  {
+    "name": "whizlabs.png",
+    "path": "aset/whizlabs.png",
+    "size": 60653,
+    "extension": "png",
+    "date": "2025-08-17T15:47:13Z"
+  },
+  {
+    "name": "wuhan-institute-of-physical-education.png",
+    "path": "aset/wuhan-institute-of-physical-education.png",
+    "size": 11035,
+    "extension": "png",
+    "date": "2025-08-17T15:47:13Z"
+  },
+  {
+    "name": "xinjian-industry-technical-college.jpeg",
+    "path": "aset/xinjian-industry-technical-college.jpeg",
+    "size": 71258,
+    "extension": "jpeg",
+    "date": "2025-08-17T15:47:13Z"
+  },
+  {
+    "name": "zhenfund.jpeg",
+    "path": "aset/zhenfund.jpeg",
+    "size": 16820,
+    "extension": "jpeg",
+    "date": "2025-08-17T15:47:13Z"
   }
 ]
