@@ -1,5 +1,61 @@
 [
   {
+    "name": "1.jpg",
+    "path": "aset/1.jpg",
+    "size": 72980,
+    "extension": "jpg",
+    "date": "2025-08-30T06:48:59Z"
+  },
+  {
+    "name": "CAO Zian.png",
+    "path": "aset/CAO Zian.png",
+    "size": 1003098,
+    "extension": "png",
+    "date": "2025-08-30T06:48:59Z"
+  },
+  {
+    "name": "IMG_8962.jpg",
+    "path": "aset/IMG_8962.jpg",
+    "size": 3289798,
+    "extension": "jpg",
+    "date": "2025-08-30T06:48:59Z"
+  },
+  {
+    "name": "IMG_8970.JPG",
+    "path": "aset/IMG_8970.JPG",
+    "size": 4565735,
+    "extension": "JPG",
+    "date": "2025-08-30T06:48:59Z"
+  },
+  {
+    "name": "IMG_8996.JPG",
+    "path": "aset/IMG_8996.JPG",
+    "size": 8411796,
+    "extension": "JPG",
+    "date": "2025-08-30T06:48:59Z"
+  },
+  {
+    "name": "IMG_9015.jpg",
+    "path": "aset/IMG_9015.jpg",
+    "size": 5139647,
+    "extension": "jpg",
+    "date": "2025-08-30T06:48:59Z"
+  },
+  {
+    "name": "IMG_9211.JPG",
+    "path": "aset/IMG_9211.JPG",
+    "size": 3868891,
+    "extension": "JPG",
+    "date": "2025-08-30T06:48:59Z"
+  },
+  {
+    "name": "Sri Suning Kusumawardani.png",
+    "path": "aset/Sri Suning Kusumawardani.png",
+    "size": 1749869,
+    "extension": "png",
+    "date": "2025-08-30T06:48:59Z"
+  },
+  {
     "name": "bohai_ship-building_vocational_college.webp",
     "path": "aset/bohai_ship-building_vocational_college.webp",
     "size": 19074,
