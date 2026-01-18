@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body>
+  <button id="btn">Test fetch</button>
+  <pre id="out">Klik tombol…</pre>
+
+  <script>
+    const API = "https://script.google.com/macros/s/AKfycbwahPXQKNaBwe-CEm8bbpUfpa3eHSavEH748FRxdWUoehtNUkyUT-utB_OOZQdmP5UiUQ/exec?action=list&limit=1"; // pakai /exec
+
+    document.getElementById("btn").onclick = async () => {
+      const out = document.getElementById("out");
+      out.textContent = "Loading...";
+      try {
+        const res = await fetch(API, { method: "GET" });
+        out.textContent =
+          "HTTP " + res.status + "\n\n" +
+          "Content-Type: " + res.headers.get("content-type") + "\n\n" +
+          (await res.text());
+      } catch (e) {
+        out.textContent = "FETCH ERROR:\n" + String(e);
+      }
+    };
+  </script>
+</body>
+</html>
