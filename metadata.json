@@ -4123,11 +4123,697 @@
     "date": "2026-04-12T10:39:39Z"
   },
   {
+    "name": "logo_universitas_nahdlatul_ulama_gorontalo.png",
+    "path": "aset/logo_universitas_nahdlatul_ulama_gorontalo.png",
+    "size": 47103,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
     "name": "logo_universitas_nahdlatul_ulama_indonesia.png",
     "path": "aset/logo_universitas_nahdlatul_ulama_indonesia.png",
     "size": 77119,
     "extension": "png",
     "date": "2026-04-12T10:39:39Z"
+  },
+  {
+    "name": "logo_universitas_nahdlatul_ulama_kalimantan_selatan.png",
+    "path": "aset/logo_universitas_nahdlatul_ulama_kalimantan_selatan.png",
+    "size": 272532,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_nahdlatul_ulama_lampung.png",
+    "path": "aset/logo_universitas_nahdlatul_ulama_lampung.png",
+    "size": 59958,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_nahdlatul_ulama_nusa_tenggara_barat.png",
+    "path": "aset/logo_universitas_nahdlatul_ulama_nusa_tenggara_barat.png",
+    "size": 31528,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_nahdlatul_ulama_sidoarjo.png",
+    "path": "aset/logo_universitas_nahdlatul_ulama_sidoarjo.png",
+    "size": 77524,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_nahdlatul_ulama_sulawesi_tenggara.png",
+    "path": "aset/logo_universitas_nahdlatul_ulama_sulawesi_tenggara.png",
+    "size": 161217,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_nahdlatul_ulama_yogyakarta.png",
+    "path": "aset/logo_universitas_nahdlatul_ulama_yogyakarta.png",
+    "size": 176997,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_nahdlatul_wathan_mataram.png",
+    "path": "aset/logo_universitas_nahdlatul_wathan_mataram.png",
+    "size": 122909,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_nasional_karangturi_semarang.png",
+    "path": "aset/logo_universitas_nasional_karangturi_semarang.png",
+    "size": 86899,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_ngurah_rai.png",
+    "path": "aset/logo_universitas_ngurah_rai.png",
+    "size": 279817,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_nias_raya.png",
+    "path": "aset/logo_universitas_nias_raya.png",
+    "size": 235573,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_nusa_bangsa.png",
+    "path": "aset/logo_universitas_nusa_bangsa.png",
+    "size": 56560,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_nusa_nipa.png",
+    "path": "aset/logo_universitas_nusa_nipa.png",
+    "size": 30784,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_oso.png",
+    "path": "aset/logo_universitas_oso.png",
+    "size": 94975,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_panca_bhakti.png",
+    "path": "aset/logo_universitas_panca_bhakti.png",
+    "size": 271994,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_panca_sakti_bekasi.png",
+    "path": "aset/logo_universitas_panca_sakti_bekasi.png",
+    "size": 287744,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pancasakti_tegal.png",
+    "path": "aset/logo_universitas_pancasakti_tegal.png",
+    "size": 219613,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pattimura.png",
+    "path": "aset/logo_universitas_pattimura.png",
+    "size": 45290,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pejuang_republik_indonesia.png",
+    "path": "aset/logo_universitas_pejuang_republik_indonesia.png",
+    "size": 120882,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pelita_bangsa.png",
+    "path": "aset/logo_universitas_pelita_bangsa.png",
+    "size": 237114,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pembangunan_panca_budi.png",
+    "path": "aset/logo_universitas_pembangunan_panca_budi.png",
+    "size": 108172,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pembinaan_masyarakat_indonesia.png",
+    "path": "aset/logo_universitas_pembinaan_masyarakat_indonesia.png",
+    "size": 234610,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pendidikan_mandalika.png",
+    "path": "aset/logo_universitas_pendidikan_mandalika.png",
+    "size": 246567,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pendidikan_muhammadiyah_sorong.png",
+    "path": "aset/logo_universitas_pendidikan_muhammadiyah_sorong.png",
+    "size": 41689,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_persatuan_guru_1945_ntt.png",
+    "path": "aset/logo_universitas_persatuan_guru_1945_ntt.png",
+    "size": 257626,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_persatuan_guru_republik_indonesia_semarang.png",
+    "path": "aset/logo_universitas_persatuan_guru_republik_indonesia_semarang.png",
+    "size": 171837,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_perwira_purbalingga.png",
+    "path": "aset/logo_universitas_perwira_purbalingga.png",
+    "size": 40294,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pesantren_tinggi_darul__ulum.png",
+    "path": "aset/logo_universitas_pesantren_tinggi_darul__ulum.png",
+    "size": 54840,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pgri_banyuwangi.png",
+    "path": "aset/logo_universitas_pgri_banyuwangi.png",
+    "size": 288679,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pgri_delta.png",
+    "path": "aset/logo_universitas_pgri_delta.png",
+    "size": 12475,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pgri_kalimantan.png",
+    "path": "aset/logo_universitas_pgri_kalimantan.png",
+    "size": 254414,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pgri_kanjuruhan_malang.png",
+    "path": "aset/logo_universitas_pgri_kanjuruhan_malang.png",
+    "size": 151369,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pgri_mahadewa_indonesia.png",
+    "path": "aset/logo_universitas_pgri_mahadewa_indonesia.png",
+    "size": 100215,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pgri_mpu_sindok.png",
+    "path": "aset/logo_universitas_pgri_mpu_sindok.png",
+    "size": 153996,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pgri_palembang.png",
+    "path": "aset/logo_universitas_pgri_palembang.png",
+    "size": 65588,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pgri_ronggolawe.png",
+    "path": "aset/logo_universitas_pgri_ronggolawe.png",
+    "size": 98020,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pgri_silampari.png",
+    "path": "aset/logo_universitas_pgri_silampari.png",
+    "size": 64266,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pgri_wiranegara.png",
+    "path": "aset/logo_universitas_pgri_wiranegara.png",
+    "size": 223366,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pignatelli_triputra.png",
+    "path": "aset/logo_universitas_pignatelli_triputra.png",
+    "size": 125707,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pohuwato.png",
+    "path": "aset/logo_universitas_pohuwato.png",
+    "size": 165105,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_prima_nusantara_bukittinggi.png",
+    "path": "aset/logo_universitas_prima_nusantara_bukittinggi.png",
+    "size": 276279,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_primagraha.png",
+    "path": "aset/logo_universitas_primagraha.png",
+    "size": 93905,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_prof_dr_moestopo_(beragama).png",
+    "path": "aset/logo_universitas_prof_dr_moestopo_(beragama).png",
+    "size": 154958,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_puangrimaggalatung.png",
+    "path": "aset/logo_universitas_puangrimaggalatung.png",
+    "size": 94046,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_putera_batam.png",
+    "path": "aset/logo_universitas_putera_batam.png",
+    "size": 13523,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_putra_bangsa.png",
+    "path": "aset/logo_universitas_putra_bangsa.png",
+    "size": 191965,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_qomaruddin.png",
+    "path": "aset/logo_universitas_qomaruddin.png",
+    "size": 138713,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_respati_indonesia.png",
+    "path": "aset/logo_universitas_respati_indonesia.png",
+    "size": 92567,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_respati_yogyakarta.png",
+    "path": "aset/logo_universitas_respati_yogyakarta.png",
+    "size": 90787,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_riau_kepulauan.png",
+    "path": "aset/logo_universitas_riau_kepulauan.png",
+    "size": 32517,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_rokania.png",
+    "path": "aset/logo_universitas_rokania.png",
+    "size": 130395,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_sahid_surakarta.png",
+    "path": "aset/logo_universitas_sahid_surakarta.png",
+    "size": 253359,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_saintek_muhammadiyah.png",
+    "path": "aset/logo_universitas_saintek_muhammadiyah.png",
+    "size": 83362,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_sari_mutiara_indonesia.png",
+    "path": "aset/logo_universitas_sari_mutiara_indonesia.png",
+    "size": 170141,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_satya_wiyata_mandala.png",
+    "path": "aset/logo_universitas_satya_wiyata_mandala.png",
+    "size": 118610,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_sebelas_april.png",
+    "path": "aset/logo_universitas_sebelas_april.png",
+    "size": 81667,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_sembilanbelas_november_kolaka.png",
+    "path": "aset/logo_universitas_sembilanbelas_november_kolaka.png",
+    "size": 121135,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_serelo_lahat.png",
+    "path": "aset/logo_universitas_serelo_lahat.png",
+    "size": 43362,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_sintuwu_maroso_poso.png",
+    "path": "aset/logo_universitas_sintuwu_maroso_poso.png",
+    "size": 155884,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_sisingamangaraja_xii_tapanuli_utara.png",
+    "path": "aset/logo_universitas_sisingamangaraja_xii_tapanuli_utara.png",
+    "size": 13595,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_sjakhyakirti.png",
+    "path": "aset/logo_universitas_sjakhyakirti.png",
+    "size": 147319,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_strada_indonesia.png",
+    "path": "aset/logo_universitas_strada_indonesia.png",
+    "size": 4099,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_sunan_gresik.png",
+    "path": "aset/logo_universitas_sunan_gresik.png",
+    "size": 22949,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_surakarta.png",
+    "path": "aset/logo_universitas_surakarta.png",
+    "size": 300207,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_swiss_german.png",
+    "path": "aset/logo_universitas_swiss_german.png",
+    "size": 8027,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_syedza_saintika.png",
+    "path": "aset/logo_universitas_syedza_saintika.png",
+    "size": 127486,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_tabanan.png",
+    "path": "aset/logo_universitas_tabanan.png",
+    "size": 234546,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_tama_jagakarsa.png",
+    "path": "aset/logo_universitas_tama_jagakarsa.png",
+    "size": 60783,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_tangerang_raya.png",
+    "path": "aset/logo_universitas_tangerang_raya.png",
+    "size": 26059,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_teknologi_sumbawa.png",
+    "path": "aset/logo_universitas_teknologi_sumbawa.png",
+    "size": 260941,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_teknologi_surabaya.png",
+    "path": "aset/logo_universitas_teknologi_surabaya.png",
+    "size": 68306,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_telogorejo_semarang.png",
+    "path": "aset/logo_universitas_telogorejo_semarang.png",
+    "size": 27427,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_timor.png",
+    "path": "aset/logo_universitas_timor.png",
+    "size": 256038,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_tjut_nyak_dhien.png",
+    "path": "aset/logo_universitas_tjut_nyak_dhien.png",
+    "size": 42695,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_tomakaka.png",
+    "path": "aset/logo_universitas_tomakaka.png",
+    "size": 46147,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_tompotika_luwuk.png",
+    "path": "aset/logo_universitas_tompotika_luwuk.png",
+    "size": 223315,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_triatma_mulya.png",
+    "path": "aset/logo_universitas_triatma_mulya.png",
+    "size": 209689,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_tribhuwana_tungga_dewi.png",
+    "path": "aset/logo_universitas_tribhuwana_tungga_dewi.png",
+    "size": 161140,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_tridinanti.png",
+    "path": "aset/logo_universitas_tridinanti.png",
+    "size": 207521,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_trunodjoyo_madura.png",
+    "path": "aset/logo_universitas_trunodjoyo_madura.png",
+    "size": 237376,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_tulungagung.png",
+    "path": "aset/logo_universitas_tulungagung.png",
+    "size": 134960,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_tunas_pembangunan_surakarta_(utp).png",
+    "path": "aset/logo_universitas_tunas_pembangunan_surakarta_(utp).png",
+    "size": 82218,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_veteran_bangun_nusantara.png",
+    "path": "aset/logo_universitas_veteran_bangun_nusantara.png",
+    "size": 261931,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_wanita_internasional.png",
+    "path": "aset/logo_universitas_wanita_internasional.png",
+    "size": 155797,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_warmadewa.png",
+    "path": "aset/logo_universitas_warmadewa.png",
+    "size": 146946,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_werisar.png",
+    "path": "aset/logo_universitas_werisar.png",
+    "size": 229749,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_widya_dharma.png",
+    "path": "aset/logo_universitas_widya_dharma.png",
+    "size": 113144,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_widya_dharma_pontianak.png",
+    "path": "aset/logo_universitas_widya_dharma_pontianak.png",
+    "size": 115810,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_widya_gama.png",
+    "path": "aset/logo_universitas_widya_gama.png",
+    "size": 177377,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_widya_kartika.png",
+    "path": "aset/logo_universitas_widya_kartika.png",
+    "size": 23692,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_widya_mataram.png",
+    "path": "aset/logo_universitas_widya_mataram.png",
+    "size": 148091,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_widya_nusantara.png",
+    "path": "aset/logo_universitas_widya_nusantara.png",
+    "size": 209212,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_widyatama.png",
+    "path": "aset/logo_universitas_widyatama.png",
+    "size": 6201,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_wijaya_kusuma_surabaya.png",
+    "path": "aset/logo_universitas_wijaya_kusuma_surabaya.png",
+    "size": 101016,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_wijayakusuma_purwokerto.png",
+    "path": "aset/logo_universitas_wijayakusuma_purwokerto.png",
+    "size": 89002,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_yapis_papua.png",
+    "path": "aset/logo_universitas_yapis_papua.png",
+    "size": 91550,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_yppi_rembang.png",
+    "path": "aset/logo_universitas_yppi_rembang.png",
+    "size": 292555,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_yudharta_pasuruan.png",
+    "path": "aset/logo_universitas_yudharta_pasuruan.png",
+    "size": 11005,
+    "extension": "png",
+    "date": "2026-04-12T10:43:40Z"
   },
   {
     "name": "logo_uph.png",
