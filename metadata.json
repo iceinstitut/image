@@ -455,6 +455,13 @@
     "date": "2026-04-12T10:31:52Z"
   },
   {
+    "name": "logo_akademi_angkatan_udara_(aau).png",
+    "path": "aset/logo_akademi_angkatan_udara_(aau).png",
+    "size": 111804,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
     "name": "logo_akademi_bakti_kemanusiaan_palang_merah_indonesia.png",
     "path": "aset/logo_akademi_bakti_kemanusiaan_palang_merah_indonesia.png",
     "size": 3633,
@@ -826,6 +833,27 @@
     "date": "2025-11-08T08:18:14Z"
   },
   {
+    "name": "logo_iain_langsa.png",
+    "path": "aset/logo_iain_langsa.png",
+    "size": 106948,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_iain_sultan_amai_gorontalo.png",
+    "path": "aset/logo_iain_sultan_amai_gorontalo.png",
+    "size": 49342,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_iain_ternate.png",
+    "path": "aset/logo_iain_ternate.png",
+    "size": 248798,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
     "name": "logo_ikip_pgri_bojonegoro.png",
     "path": "aset/logo_ikip_pgri_bojonegoro.png",
     "size": 255650,
@@ -845,6 +873,104 @@
     "size": 291779,
     "extension": "png",
     "date": "2026-04-12T10:31:52Z"
+  },
+  {
+    "name": "logo_institut_agama_islam_(iai)_pangeran_diponegoro_nganjuk.png",
+    "path": "aset/logo_institut_agama_islam_(iai)_pangeran_diponegoro_nganjuk.png",
+    "size": 236853,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_institut_agama_islam_attarmasi_pacitan.png",
+    "path": "aset/logo_institut_agama_islam_attarmasi_pacitan.png",
+    "size": 162343,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_institut_agama_islam_az-zaytun_indonesia.png",
+    "path": "aset/logo_institut_agama_islam_az-zaytun_indonesia.png",
+    "size": 87043,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_institut_agama_islam_darussalam_(iaid)_ciamis_jawa_barat.png",
+    "path": "aset/logo_institut_agama_islam_darussalam_(iaid)_ciamis_jawa_barat.png",
+    "size": 66382,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_institut_agama_islam_hamzanwadi_nw_lombok_timur.png",
+    "path": "aset/logo_institut_agama_islam_hamzanwadi_nw_lombok_timur.png",
+    "size": 182129,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_institut_agama_islam_negeri_fattahul_muluk_papua.png",
+    "path": "aset/logo_institut_agama_islam_negeri_fattahul_muluk_papua.png",
+    "size": 156347,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_institut_agama_islam_negeri_kudus.png",
+    "path": "aset/logo_institut_agama_islam_negeri_kudus.png",
+    "size": 21756,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_institut_agama_islam_negeri_madura.png",
+    "path": "aset/logo_institut_agama_islam_negeri_madura.png",
+    "size": 96724,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_institut_agama_islam_negeri_sorong.png",
+    "path": "aset/logo_institut_agama_islam_negeri_sorong.png",
+    "size": 21645,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_institut_agama_islam_sultan_muhammad_syafiuddin_sambas.png",
+    "path": "aset/logo_institut_agama_islam_sultan_muhammad_syafiuddin_sambas.png",
+    "size": 270167,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_institut_agama_islam_tazkia.png",
+    "path": "aset/logo_institut_agama_islam_tazkia.png",
+    "size": 59361,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_institut_agama_islam_yasni_bungo.png",
+    "path": "aset/logo_institut_agama_islam_yasni_bungo.png",
+    "size": 56024,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_institut_agama_kristen_negeri_kupang.png",
+    "path": "aset/logo_institut_agama_kristen_negeri_kupang.png",
+    "size": 250418,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_institut_agama_kristen_negeri_toraja.png",
+    "path": "aset/logo_institut_agama_kristen_negeri_toraja.png",
+    "size": 97695,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
   },
   {
     "name": "logo_institut_az_zuhra.png",
@@ -964,6 +1090,13 @@
     "size": 69220,
     "extension": "png",
     "date": "2026-04-12T10:31:52Z"
+  },
+  {
+    "name": "logo_institut_pemerintahan_dalam_negeri.png",
+    "path": "aset/logo_institut_pemerintahan_dalam_negeri.png",
+    "size": 286603,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
   },
   {
     "name": "logo_institut_pertanian_stiper.png",
@@ -1232,6 +1365,13 @@
     "date": "2026-04-12T10:31:52Z"
   },
   {
+    "name": "logo_politeknik_ati_makassar.png",
+    "path": "aset/logo_politeknik_ati_makassar.png",
+    "size": 104435,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
     "name": "logo_politeknik_atmi.png",
     "path": "aset/logo_politeknik_atmi.png",
     "size": 126728,
@@ -1302,6 +1442,20 @@
     "date": "2026-04-12T10:34:20Z"
   },
   {
+    "name": "logo_politeknik_energi_dan_mineral_akamigas.png",
+    "path": "aset/logo_politeknik_energi_dan_mineral_akamigas.png",
+    "size": 46267,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_politeknik_enjiniring_pertanian_indonesia.png",
+    "path": "aset/logo_politeknik_enjiniring_pertanian_indonesia.png",
+    "size": 154554,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
     "name": "logo_politeknik_gorontalo.png",
     "path": "aset/logo_politeknik_gorontalo.png",
     "size": 160410,
@@ -1314,6 +1468,20 @@
     "size": 17739,
     "extension": "png",
     "date": "2026-04-12T10:34:20Z"
+  },
+  {
+    "name": "logo_politeknik_ilmu_pelayaran_semarang.png",
+    "path": "aset/logo_politeknik_ilmu_pelayaran_semarang.png",
+    "size": 17561,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_politeknik_industri_furnitur_dan_pengolahan_kayu.png",
+    "path": "aset/logo_politeknik_industri_furnitur_dan_pengolahan_kayu.png",
+    "size": 75173,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
   },
   {
     "name": "logo_politeknik_internasional_bali.png",
@@ -1391,6 +1559,20 @@
     "size": 227453,
     "extension": "png",
     "date": "2026-04-12T10:34:20Z"
+  },
+  {
+    "name": "logo_politeknik_ketenagakerjaan.png",
+    "path": "aset/logo_politeknik_ketenagakerjaan.png",
+    "size": 56060,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_politeknik_keuangan_negara_stan.png",
+    "path": "aset/logo_politeknik_keuangan_negara_stan.png",
+    "size": 94220,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
   },
   {
     "name": "logo_politeknik_kutaraja.png",
@@ -1610,11 +1792,39 @@
     "date": "2026-04-12T10:34:20Z"
   },
   {
+    "name": "logo_politeknik_pariwisata_bali.png",
+    "path": "aset/logo_politeknik_pariwisata_bali.png",
+    "size": 289713,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_politeknik_pariwisata_makassar.png",
+    "path": "aset/logo_politeknik_pariwisata_makassar.png",
+    "size": 287884,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_politeknik_pariwisata_medan.png",
+    "path": "aset/logo_politeknik_pariwisata_medan.png",
+    "size": 152727,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
     "name": "logo_politeknik_pariwisata_prima_internasional.png",
     "path": "aset/logo_politeknik_pariwisata_prima_internasional.png",
     "size": 171019,
     "extension": "png",
     "date": "2026-04-12T10:34:20Z"
+  },
+  {
+    "name": "logo_politeknik_pekerjaan_umum.png",
+    "path": "aset/logo_politeknik_pekerjaan_umum.png",
+    "size": 253803,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
   },
   {
     "name": "logo_politeknik_pertanian_negeri_pangkajene_kepulauan.png",
@@ -1652,11 +1862,39 @@
     "date": "2026-04-12T10:34:20Z"
   },
   {
+    "name": "logo_politeknik_siber_dan_sandi_negara.png",
+    "path": "aset/logo_politeknik_siber_dan_sandi_negara.png",
+    "size": 211513,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
     "name": "logo_politeknik_siti_nadhira.png",
     "path": "aset/logo_politeknik_siti_nadhira.png",
     "size": 35151,
     "extension": "png",
     "date": "2026-04-12T10:34:20Z"
+  },
+  {
+    "name": "logo_politeknik_statistika_stis.png",
+    "path": "aset/logo_politeknik_statistika_stis.png",
+    "size": 63321,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_politeknik_stia_lan_bandung.png",
+    "path": "aset/logo_politeknik_stia_lan_bandung.png",
+    "size": 160683,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_politeknik_sttt_bandung.png",
+    "path": "aset/logo_politeknik_sttt_bandung.png",
+    "size": 259356,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
   },
   {
     "name": "logo_politeknik_sukabumi.png",
@@ -1708,6 +1946,76 @@
     "date": "2026-04-12T10:34:20Z"
   },
   {
+    "name": "logo_poltekkes_kemenkes_banjarmasin.png",
+    "path": "aset/logo_poltekkes_kemenkes_banjarmasin.png",
+    "size": 66603,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_poltekkes_kemenkes_gorontalo.png",
+    "path": "aset/logo_poltekkes_kemenkes_gorontalo.png",
+    "size": 122226,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_poltekkes_kemenkes_jakarta_iii.png",
+    "path": "aset/logo_poltekkes_kemenkes_jakarta_iii.png",
+    "size": 180748,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_poltekkes_kemenkes_jayapura.png",
+    "path": "aset/logo_poltekkes_kemenkes_jayapura.png",
+    "size": 43591,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_poltekkes_kemenkes_kalimantan_timur.png",
+    "path": "aset/logo_poltekkes_kemenkes_kalimantan_timur.png",
+    "size": 233275,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_poltekkes_kemenkes_medan.png",
+    "path": "aset/logo_poltekkes_kemenkes_medan.png",
+    "size": 31836,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_poltekkes_kemenkes_pontianak.png",
+    "path": "aset/logo_poltekkes_kemenkes_pontianak.png",
+    "size": 181010,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_poltekkes_kemenkes_riau.png",
+    "path": "aset/logo_poltekkes_kemenkes_riau.png",
+    "size": 10160,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_poltekkes_kemenkes_surabaya.png",
+    "path": "aset/logo_poltekkes_kemenkes_surabaya.png",
+    "size": 49389,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_poltekkes_kemenkes_yogyakarta.png",
+    "path": "aset/logo_poltekkes_kemenkes_yogyakarta.png",
+    "size": 62869,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
     "name": "logo_science_&_technology_school_of_anhui.png",
     "path": "aset/logo_science_&_technology_school_of_anhui.png",
     "size": 6135,
@@ -1741,6 +2049,13 @@
     "size": 5673,
     "extension": "png",
     "date": "2026-04-12T10:34:20Z"
+  },
+  {
+    "name": "logo_sekolah_tinggi_ekonomi_islam_sebi.png",
+    "path": "aset/logo_sekolah_tinggi_ekonomi_islam_sebi.png",
+    "size": 9276,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
   },
   {
     "name": "logo_sekolah_tinggi_filsafat_driyarkara.png",
@@ -1783,6 +2098,20 @@
     "size": 96792,
     "extension": "png",
     "date": "2026-04-12T10:34:20Z"
+  },
+  {
+    "name": "logo_sekolah_tinggi_ilmu_agama_buddha_smaratungga.png",
+    "path": "aset/logo_sekolah_tinggi_ilmu_agama_buddha_smaratungga.png",
+    "size": 229564,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_sekolah_tinggi_ilmu_al-qur'an_as-syifa.png",
+    "path": "aset/logo_sekolah_tinggi_ilmu_al-qur'an_as-syifa.png",
+    "size": 65774,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
   },
   {
     "name": "logo_sekolah_tinggi_ilmu_ekonomi_bangkinang.png",
@@ -2331,6 +2660,13 @@
     "date": "2026-04-12T10:36:01Z"
   },
   {
+    "name": "logo_sekolah_tinggi_ilmu_syariah_abu_zairi_bondowoso_jawa_timur.png",
+    "path": "aset/logo_sekolah_tinggi_ilmu_syariah_abu_zairi_bondowoso_jawa_timur.png",
+    "size": 231241,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
     "name": "logo_sekolah_tinggi_informatika_&_komputer_indonesia.png",
     "path": "aset/logo_sekolah_tinggi_informatika_&_komputer_indonesia.png",
     "size": 151232,
@@ -2548,6 +2884,20 @@
     "date": "2026-04-12T10:36:01Z"
   },
   {
+    "name": "logo_sekolah_tinggi_teologi_baptis_jakarta.png",
+    "path": "aset/logo_sekolah_tinggi_teologi_baptis_jakarta.png",
+    "size": 278301,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_sekolah_tinggi_teologi_sangkakala.png",
+    "path": "aset/logo_sekolah_tinggi_teologi_sangkakala.png",
+    "size": 131252,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
     "name": "logo_shaanxi_university_of_chinese_medicine.png",
     "path": "aset/logo_shaanxi_university_of_chinese_medicine.png",
     "size": 33231,
@@ -2574,6 +2924,48 @@
     "size": 102029,
     "extension": "png",
     "date": "2026-04-12T10:36:01Z"
+  },
+  {
+    "name": "logo_stai_al-andina_sukabumi.png",
+    "path": "aset/logo_stai_al-andina_sukabumi.png",
+    "size": 17993,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_stai_al-musaddadiyah_garut.png",
+    "path": "aset/logo_stai_al-musaddadiyah_garut.png",
+    "size": 36486,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_stai_dr._kh._ez._muttaqien_purwakarta.png",
+    "path": "aset/logo_stai_dr._kh._ez._muttaqien_purwakarta.png",
+    "size": 94055,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_stai_muhammadiyah_tulungagung.png",
+    "path": "aset/logo_stai_muhammadiyah_tulungagung.png",
+    "size": 96053,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_stai_ptdii_jakarta.png",
+    "path": "aset/logo_stai_ptdii_jakarta.png",
+    "size": 56125,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_stebi_global_mulia_cikarang.png",
+    "path": "aset/logo_stebi_global_mulia_cikarang.png",
+    "size": 296636,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
   },
   {
     "name": "logo_stia_dan_manajemen_kepelabuhan_barunawati.png",
@@ -2791,6 +3183,13 @@
     "size": 83517,
     "extension": "png",
     "date": "2026-04-12T10:37:49Z"
+  },
+  {
+    "name": "logo_stit_madina_sragen.png",
+    "path": "aset/logo_stit_madina_sragen.png",
+    "size": 62353,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
   },
   {
     "name": "logo_stkip_agama_hindu_singaraja.png",
@@ -3050,6 +3449,20 @@
     "size": 196368,
     "extension": "png",
     "date": "2026-04-12T10:37:49Z"
+  },
+  {
+    "name": "logo_stt_anugrah_indonesia.png",
+    "path": "aset/logo_stt_anugrah_indonesia.png",
+    "size": 288278,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_stt_samuel_elizabeth.png",
+    "path": "aset/logo_stt_samuel_elizabeth.png",
+    "size": 50700,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
   },
   {
     "name": "logo_tuku.png",
@@ -3563,6 +3976,13 @@
     "date": "2026-04-12T10:39:39Z"
   },
   {
+    "name": "logo_universitas_hindu_negeri_i_gusti_bagus_sugriwa_denpasar.png",
+    "path": "aset/logo_universitas_hindu_negeri_i_gusti_bagus_sugriwa_denpasar.png",
+    "size": 104554,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
     "name": "logo_universitas_ibnu_chaldun.png",
     "path": "aset/logo_universitas_ibnu_chaldun.png",
     "size": 22752,
@@ -3654,6 +4074,13 @@
     "date": "2026-04-12T10:39:39Z"
   },
   {
+    "name": "logo_universitas_islam_internasional_indonesia.png",
+    "path": "aset/logo_universitas_islam_internasional_indonesia.png",
+    "size": 20851,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
     "name": "logo_universitas_islam_kebangsaan_indonesia.png",
     "path": "aset/logo_universitas_islam_kebangsaan_indonesia.png",
     "size": 27590,
@@ -3680,6 +4107,34 @@
     "size": 26480,
     "extension": "png",
     "date": "2026-04-12T10:39:39Z"
+  },
+  {
+    "name": "logo_universitas_islam_negeri_ar-raniry_banda_aceh.png",
+    "path": "aset/logo_universitas_islam_negeri_ar-raniry_banda_aceh.png",
+    "size": 20140,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_universitas_islam_negeri_kiai_haji_achmad_siddiq_jember.png",
+    "path": "aset/logo_universitas_islam_negeri_kiai_haji_achmad_siddiq_jember.png",
+    "size": 44117,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_universitas_islam_negeri_raden_mas_said_surakarta.png",
+    "path": "aset/logo_universitas_islam_negeri_raden_mas_said_surakarta.png",
+    "size": 21642,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
+  },
+  {
+    "name": "logo_universitas_islam_negeri_sultan_maulana_hasanuddin_banten.png",
+    "path": "aset/logo_universitas_islam_negeri_sultan_maulana_hasanuddin_banten.png",
+    "size": 32506,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
   },
   {
     "name": "logo_universitas_islam_sumatera_barat.png",
@@ -4310,6 +4765,13 @@
     "size": 171837,
     "extension": "png",
     "date": "2026-04-12T10:43:40Z"
+  },
+  {
+    "name": "logo_universitas_pertahanan.png",
+    "path": "aset/logo_universitas_pertahanan.png",
+    "size": 43823,
+    "extension": "png",
+    "date": "2026-04-12T13:00:46Z"
   },
   {
     "name": "logo_universitas_perwira_purbalingga.png",
