@@ -3514,6 +3514,13 @@
     "date": "2026-04-13T16:19:29Z"
   },
   {
+    "name": "logo_corban_university.png",
+    "path": "aset/logo_corban_university.png",
+    "size": 6407,
+    "extension": "png",
+    "date": "2026-04-14T14:32:03Z"
+  },
+  {
     "name": "logo_cqmu_full.png",
     "path": "aset/logo_cqmu_full.png",
     "size": 103558,
@@ -6982,13 +6989,6 @@
     "name": "logo_institut_bisnis_dan_informatika_kwik_kian_gie.png",
     "path": "aset/logo_institut_bisnis_dan_informatika_kwik_kian_gie.png",
     "size": 29067,
-    "extension": "png",
-    "date": "2026-04-12T10:31:52Z"
-  },
-  {
-    "name": "logo_institut_bisnis_dan_keuangan_nitro.png",
-    "path": "aset/logo_institut_bisnis_dan_keuangan_nitro.png",
-    "size": 259754,
     "extension": "png",
     "date": "2026-04-12T10:31:52Z"
   }
