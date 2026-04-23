@@ -1,137 +1,121 @@
 const repoOwner = 'iceinstitut';
 const repoName = 'image';
 const folderPath = 'aset';
-const imagesPerPage = 12;
-let currentPage = 1;
+
+const limit = 12;
+let page = 1;
 let allImages = [];
+let filteredImages = [];
+let isLoading = false;
 
 window.addEventListener('DOMContentLoaded', () => {
+
   fetch('metadata.json')
     .then(res => res.json())
     .then(data => {
       allImages = data;
+      filteredImages = data;
+      document.getElementById('loading').style.display = 'none';
       renderImages();
+      initObserver();
     });
 
-  const searchInput = document.getElementById('search-input');
-  if (searchInput) {
-    searchInput.addEventListener('input', () => {
-      currentPage = 1;
+  // debounce search
+  let debounce;
+  document.getElementById('search-input').addEventListener('input', (e) => {
+    clearTimeout(debounce);
+    debounce = setTimeout(() => {
+      const q = e.target.value.toLowerCase();
+      filteredImages = allImages.filter(img => img.name.toLowerCase().includes(q));
+      page = 1;
+      document.getElementById('image-list').innerHTML = '';
       renderImages();
-    });
-  }
+    }, 300);
+  });
 });
 
+function initObserver() {
+  const trigger = document.getElementById('load-more-trigger');
+
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !isLoading) {
+      renderImages();
+    }
+  }, {
+    rootMargin: '200px'
+  });
+
+  observer.observe(trigger);
+}
+
 function renderImages() {
+  if (isLoading) return;
+
+  const start = (page - 1) * limit;
+  const end = start + limit;
+
+  if (start >= filteredImages.length) return;
+
+  isLoading = true;
+
   const container = document.getElementById('image-list');
-  if (!container) return;
+  const slice = filteredImages.slice(start, end);
 
-  container.innerHTML = '';
+  slice.forEach(file => {
 
-  const query = document.getElementById('search-input')?.value?.toLowerCase() || '';
-  const filtered = allImages.filter(img => img.name.toLowerCase().includes(query));
-
-  const totalPages = Math.ceil(filtered.length / imagesPerPage);
-  const startIndex = (currentPage - 1) * imagesPerPage;
-  const endIndex = Math.min(startIndex + imagesPerPage, filtered.length);
-
-  const totalCount = document.getElementById('total-count');
-  if (totalCount) {
-    totalCount.textContent = `Menampilkan ${endIndex - startIndex} dari ${filtered.length} gambar (halaman ${currentPage} dari ${totalPages || 1})`;
-  }
-
-  const paginated = filtered.slice(startIndex, endIndex);
-
-  paginated.forEach((file, index) => {
-    const rawUrl = `https://${repoOwner}.github.io/${repoName}/${folderPath}/${file.name}`;
-    const inputId = `input-url-${startIndex + index}`;
-    const fileSize = formatSize(file.size);
-    const date = new Date(file.date);
-    const formattedDate = date.toLocaleString('id-ID', {
-      dateStyle: 'medium',
-      timeStyle: 'short',
-      timeZone: 'Asia/Jakarta'
-    });
+    const url = `https://${repoOwner}.github.io/${repoName}/${folderPath}/${file.name}`;
 
     const col = document.createElement('div');
-    col.className = 'col-md-6 col-lg-4';
+    col.className = 'col-6 col-md-4 col-lg-3';
 
     col.innerHTML = `
-      <div class="card shadow-sm h-100">
-        <div class="d-flex align-items-center justify-content-center p-3" style="height: 250px;">
-          <img loading="lazy" src="${rawUrl}" alt="${file.name}" class="img-fluid mh-100">
+      <div class="card shadow-sm border-0 h-100">
+        <div class="position-relative">
+          <img src="${url}" loading="lazy" class="card-img-top" onclick="openPreview('${url}')">
+          <span class="badge bg-dark badge-ext">${file.extension}</span>
         </div>
-        <div class="card-body">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong>${file.name}</strong></li>
-            <li class="list-group-item"><strong>Ekstensi:</strong> .${file.extension}</li>
-            <li class="list-group-item"><strong>Ukuran:</strong> ${fileSize}</li>
-            <li class="list-group-item"><strong>Update Terakhir:</strong> ${formattedDate}</li>
-          </ul>
+
+        <div class="card-body p-2">
+          <div class="small fw-bold text-truncate">${file.name}</div>
+          <div class="small text-muted">${formatSize(file.size)}</div>
         </div>
-        <div class="card-footer">
-          <div class="input-group">
-            <button class="btn btn-outline-primary" type="button" onclick="copyToClipboard('${inputId}', this)" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Copy URL">
-              <i class="bi bi-clipboard-fill"></i>
-            </button>
-            <input type="text" class="form-control" id="${inputId}" value="${rawUrl}" readonly onclick="this.select()">
-          </div>
+
+        <div class="card-footer p-2">
+          <button class="btn btn-sm btn-outline-primary w-100" onclick="copyURL('${url}', this)">
+            <i class="bi bi-clipboard"></i>
+          </button>
         </div>
       </div>
     `;
+
     container.appendChild(col);
   });
 
-  // Inisialisasi ulang tooltip
-  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-  tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
-
-  renderPagination(totalPages);
+  page++;
+  isLoading = false;
 }
 
-function renderPagination(totalPages) {
-  const pagination = document.getElementById('pagination');
-  if (!pagination) return;
-  pagination.innerHTML = '';
-
-  for (let i = 1; i <= totalPages; i++) {
-    const li = document.createElement('li');
-    li.className = 'page-item' + (i === currentPage ? ' active' : '');
-    li.innerHTML = `<button class="page-link" onclick="gotoPage(${i})">${i}</button>`;
-    pagination.appendChild(li);
-  }
+function openPreview(url) {
+  document.getElementById('previewImage').src = url;
+  new bootstrap.Modal(document.getElementById('previewModal')).show();
 }
 
-function gotoPage(page) {
-  currentPage = page;
-  renderImages();
-}
-
-function copyToClipboard(inputId, button) {
-  const input = document.getElementById(inputId);
-  if (!input) return;
-
-  const text = input.value;
-
-  navigator.clipboard.writeText(text).then(() => {
-    const original = button.innerHTML;
-    button.innerHTML = "<i class='bi bi-check-lg'></i>";
-    button.classList.remove("btn-outline-primary");
-    button.classList.add("btn-success");
+function copyURL(url, btn) {
+  navigator.clipboard.writeText(url).then(() => {
+    btn.innerHTML = '<i class="bi bi-check"></i>';
+    btn.classList.remove('btn-outline-primary');
+    btn.classList.add('btn-success');
 
     setTimeout(() => {
-      button.innerHTML = original;
-      button.classList.add("btn-outline-primary");
-      button.classList.remove("btn-success");
+      btn.innerHTML = '<i class="bi bi-clipboard"></i>';
+      btn.classList.add('btn-outline-primary');
+      btn.classList.remove('btn-success');
     }, 1500);
-  }).catch(err => {
-    console.error('Gagal menyalin ke clipboard:', err);
-    alert('Tidak dapat menyalin ke clipboard. Coba salin manual.');
   });
 }
 
 function formatSize(bytes) {
-  if (bytes < 1024) return `${bytes} B`;
-  else if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
-  else return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+  return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
 }
