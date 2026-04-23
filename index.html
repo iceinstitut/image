@@ -4,19 +4,179 @@
   <meta charset="UTF-8">
   <title>Image Hosting - iceinstitut</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link href="https://iceinstitut.github.io/image/bootstrap.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    body { background:#f8f9fa; }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      cursor: pointer;
+      background: #eee;
+    }
+
+    .badge-ext {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+
+    #loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      flex-direction: column;
+    }
+  </style>
 </head>
-<body class="bg-light py-4">
-  <div class="container">
-    <h1 class="mb-4 text-center">📁 Daftar Gambar di Repository</h1>
-    <p class="text-center">Klik tombol <i class="bi bi-clipboard-fill"></i> untuk menyalin URL.</p>
-    <div class="mb-3"><input type="text" id="search-input" class="form-control" placeholder="🔍 Cari file..."></div>
-    <p id="total-count" class="text-muted small">Memuat data...</p>
-    <div id="image-list" class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3"></div>
-    <nav><ul id="pagination" class="pagination justify-content-center mt-4"></ul></nav>
+
+<body>
+<div class="container py-4">
+
+  <h4 class="text-center mb-3">📁 Image Repository</h4>
+
+  <input type="text" id="search-input" class="form-control mb-3" placeholder="🔍 Cari file...">
+
+  <div id="loading">
+    <div class="spinner-border text-primary"></div>
+    <small class="mt-2">Memuat data...</small>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+
+  <div id="image-list" class="row g-3"></div>
+
+</div>
+
+<!-- Modal Preview -->
+<div class="modal fade" id="previewModal">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <img id="previewImage" class="w-100">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const repoOwner = 'iceinstitut';
+const repoName = 'image';
+const folderPath = 'aset';
+
+const limit = 12;
+let page = 1;
+let allImages = [];
+let filteredImages = [];
+let isLoading = false;
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  fetch('metadata.json')
+    .then(res => res.json())
+    .then(data => {
+      allImages = data;
+      filteredImages = data;
+      document.getElementById('loading').style.display = 'none';
+      renderImages();
+    });
+
+  // debounce search
+  let debounce;
+  document.getElementById('search-input').addEventListener('input', (e) => {
+    clearTimeout(debounce);
+    debounce = setTimeout(() => {
+      const q = e.target.value.toLowerCase();
+      filteredImages = allImages.filter(img => img.name.toLowerCase().includes(q));
+      page = 1;
+      document.getElementById('image-list').innerHTML = '';
+      renderImages();
+    }, 300);
+  });
+
+  // infinite scroll
+  window.addEventListener('scroll', () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 300) {
+      renderImages();
+    }
+  });
+});
+
+function renderImages() {
+  if (isLoading) return;
+
+  const start = (page - 1) * limit;
+  const end = start + limit;
+
+  if (start >= filteredImages.length) return;
+
+  isLoading = true;
+
+  const container = document.getElementById('image-list');
+
+  const slice = filteredImages.slice(start, end);
+
+  slice.forEach(file => {
+
+    const url = `https://${repoOwner}.github.io/${repoName}/${folderPath}/${file.name}`;
+
+    const col = document.createElement('div');
+    col.className = 'col-6 col-md-4 col-lg-3';
+
+    col.innerHTML = `
+      <div class="card shadow-sm border-0 h-100">
+        <div class="position-relative">
+          <img src="${url}" loading="lazy" class="card-img-top" onclick="openPreview('${url}')">
+          <span class="badge bg-dark badge-ext">${file.extension}</span>
+        </div>
+
+        <div class="card-body p-2">
+          <div class="small fw-bold text-truncate">${file.name}</div>
+          <div class="small text-muted">${formatSize(file.size)}</div>
+        </div>
+
+        <div class="card-footer p-2">
+          <button class="btn btn-sm btn-outline-primary w-100" onclick="copyURL('${url}', this)">
+            <i class="bi bi-clipboard"></i>
+          </button>
+        </div>
+      </div>
+    `;
+
+    container.appendChild(col);
+  });
+
+  page++;
+  isLoading = false;
+}
+
+function openPreview(url) {
+  document.getElementById('previewImage').src = url;
+  new bootstrap.Modal(document.getElementById('previewModal')).show();
+}
+
+function copyURL(url, btn) {
+  navigator.clipboard.writeText(url).then(() => {
+    btn.innerHTML = '<i class="bi bi-check"></i>';
+    btn.classList.remove('btn-outline-primary');
+    btn.classList.add('btn-success');
+
+    setTimeout(() => {
+      btn.innerHTML = '<i class="bi bi-clipboard"></i>';
+      btn.classList.add('btn-outline-primary');
+      btn.classList.remove('btn-success');
+    }, 1500);
+  });
+}
+
+function formatSize(bytes) {
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+  return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+}
+</script>
+
 </body>
 </html>
