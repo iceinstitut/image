@@ -31,6 +31,10 @@
       height: 200px;
       flex-direction: column;
     }
+
+    #load-more-trigger {
+      height: 1px;
+    }
   </style>
 </head>
 
@@ -47,6 +51,8 @@
   </div>
 
   <div id="image-list" class="row g-3"></div>
+
+  <div id="load-more-trigger"></div>
 
 </div>
 
@@ -81,6 +87,7 @@ window.addEventListener('DOMContentLoaded', () => {
       filteredImages = data;
       document.getElementById('loading').style.display = 'none';
       renderImages();
+      initObserver();
     });
 
   // debounce search
@@ -95,14 +102,21 @@ window.addEventListener('DOMContentLoaded', () => {
       renderImages();
     }, 300);
   });
+});
 
-  // infinite scroll
-  window.addEventListener('scroll', () => {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 300) {
+function initObserver() {
+  const trigger = document.getElementById('load-more-trigger');
+
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !isLoading) {
       renderImages();
     }
+  }, {
+    rootMargin: '200px'
   });
-});
+
+  observer.observe(trigger);
+}
 
 function renderImages() {
   if (isLoading) return;
@@ -115,7 +129,6 @@ function renderImages() {
   isLoading = true;
 
   const container = document.getElementById('image-list');
-
   const slice = filteredImages.slice(start, end);
 
   slice.forEach(file => {
