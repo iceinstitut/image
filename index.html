@@ -4,19 +4,96 @@
   <meta charset="UTF-8">
   <title>Image Hosting - iceinstitut</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://iceinstitut.github.io/image/aset/favicon_icei.png" type="image/png">
   <link href="https://iceinstitut.github.io/image/bootstrap.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <script>
+      function loadComponent(id, url) {
+        fetch("https://iceinstitut.github.io/konten/" + url).then(response => response.text()).then(data => {
+          document.getElementById(id).innerHTML = data;
+        });
+      }
+      document.addEventListener("DOMContentLoaded", function() {
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+      });
+      fetch("https://iceinstitut.github.io/konten/head.html").then(response => response.text()).then(data => {
+        const temp = document.createElement("div");
+        temp.innerHTML = data;
+        // Proses <link> langsung
+        temp.querySelectorAll("link").forEach(link => {
+          document.head.appendChild(link);
+        });
+        temp.querySelectorAll("script").forEach(oldScript => {
+          const newScript = document.createElement("script");
+          newScript.src = oldScript.src;
+          if (oldScript.defer) newScript.defer = true;
+          document.head.appendChild(newScript);
+        });
+      });
+    </script>
+
+  <style>
+    body { background:#f8f9fa; }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      cursor: pointer;
+      background: #eee;
+    }
+
+    .badge-ext {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+
+    #loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      flex-direction: column;
+    }
+
+    #load-more-trigger {
+      height: 1px;
+    }
+  </style>
 </head>
-<body class="bg-light py-4">
-  <div class="container">
-    <h1 class="mb-4 text-center">📁 Daftar Gambar di Repository</h1>
-    <p class="text-center">Klik tombol <i class="bi bi-clipboard-fill"></i> untuk menyalin URL.</p>
-    <div class="mb-3"><input type="text" id="search-input" class="form-control" placeholder="🔍 Cari file..."></div>
-    <p id="total-count" class="text-muted small">Memuat data...</p>
-    <div id="image-list" class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3"></div>
-    <nav><ul id="pagination" class="pagination justify-content-center mt-4"></ul></nav>
+
+<body>
+  <div id="header"></div>
+<div class="container py-4">
+
+  <h4 class="text-center mb-3">📁 Image Repository</h4>
+
+  <input type="text" id="search-input" class="form-control mb-3" placeholder="🔍 Cari file...">
+
+  <div id="loading">
+    <div class="spinner-border text-primary"></div>
+    <small class="mt-2">Memuat data...</small>
   </div>
+
+  <div id="image-list" class="row g-3"></div>
+
+  <div id="load-more-trigger"></div>
+
+</div>
+
+<!-- Modal Preview -->
+<div class="modal fade" id="previewModal">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <img id="previewImage" class="w-100">
+    </div>
+  </div>
+</div>
+
+<div id="footer"></div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
+
 </body>
 </html>
