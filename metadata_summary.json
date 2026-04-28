@@ -1,0 +1,88 @@
+{
+  "generated_at": "2026-04-28T14:13:10.527Z",
+  "repository": "iceinstitut/image",
+  "total_images": 3520,
+  "total_size_bytes": 386434747,
+  "images_with_dates": 3010,
+  "images_without_dates": 510,
+  "file_types": {
+    "jpg": 188,
+    "png": 3282,
+    "svg": 9,
+    "webp": 26,
+    "jpeg": 13,
+    "gif": 2
+  },
+  "sample_images": [
+    {
+      "name": "1.jpg",
+      "path": "aset/1.jpg",
+      "size": 72980,
+      "extension": "jpg",
+      "date": "2025-08-30T06:48:59Z"
+    },
+    {
+      "name": "CAO Zian.png",
+      "path": "aset/CAO Zian.png",
+      "size": 1003098,
+      "extension": "png",
+      "date": "2025-08-30T06:48:59Z"
+    },
+    {
+      "name": "East_China_Normal_University_logo.svg",
+      "path": "aset/East_China_Normal_University_logo.svg",
+      "size": 193202,
+      "extension": "svg",
+      "date": "2026-01-18T04:22:18Z"
+    },
+    {
+      "name": "IMG_8962.jpg",
+      "path": "aset/IMG_8962.jpg",
+      "size": 3289798,
+      "extension": "jpg",
+      "date": "2025-08-30T06:48:59Z"
+    },
+    {
+      "name": "IMG_8970.JPG",
+      "path": "aset/IMG_8970.JPG",
+      "size": 4565735,
+      "extension": "jpg",
+      "date": "2025-08-30T06:48:59Z"
+    },
+    {
+      "name": "IMG_8996.JPG",
+      "path": "aset/IMG_8996.JPG",
+      "size": 8411796,
+      "extension": "jpg",
+      "date": "2025-08-30T06:48:59Z"
+    },
+    {
+      "name": "IMG_9015.jpg",
+      "path": "aset/IMG_9015.jpg",
+      "size": 5139647,
+      "extension": "jpg",
+      "date": "2025-08-30T06:48:59Z"
+    },
+    {
+      "name": "IMG_9211.JPG",
+      "path": "aset/IMG_9211.JPG",
+      "size": 3868891,
+      "extension": "jpg",
+      "date": "2025-08-30T06:48:59Z"
+    },
+    {
+      "name": "Illustration of an online class with instructor and participants learning together.jpg",
+      "path": "aset/Illustration of an online class with instructor and participants learning together.jpg",
+      "size": 264208,
+      "extension": "jpg",
+      "date": "2025-12-29T15:00:13Z"
+    },
+    {
+      "name": "Illustration of people studying independently with laptops_cellphones at flexible times..jpg",
+      "path": "aset/Illustration of people studying independently with laptops_cellphones at flexible times..jpg",
+      "size": 205403,
+      "extension": "jpg",
+      "date": "2025-12-29T14:57:03Z"
+    }
+  ]
+}
