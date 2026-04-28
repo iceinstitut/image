@@ -22,44 +22,7 @@ jobs:
       - name: Install node-fetch
         run: npm install node-fetch
 
-      - name: Fetch all folder metadata (with pagination)
-        env:
-          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
-        run: |
-          mkdir -p temp
-          
-          # Fetch all files from aset folder with pagination
-          page=1
-          > temp/all_files.json
-          
-          while true; do
-            echo "Fetching page $page..."
-            curl -s -H "Authorization: token $GITHUB_TOKEN" \
-              "https://api.github.com/repos/${{ github.repository }}/contents/aset?page=$page&per_page=100" \
-              -o temp/page_$page.json
-            
-            # Check if response is empty or error
-            if [ ! -s temp/page_$page.json ] || grep -q '"message":' temp/page_$page.json; then
-              break
-            fi
-            
-            # Append to all files
-            jq -s 'add' temp/all_files.json temp/page_$page.json > temp/merged.json 2>/dev/null || cat temp/page_$page.json >> temp/all_files.json
-            mv temp/merged.json temp/all_files.json 2>/dev/null || true
-            
-            # Check if we got less than 100 files (last page)
-            count=$(jq 'length' temp/page_$page.json 2>/dev/null || echo "0")
-            if [ "$count" -lt 100 ]; then
-              break
-            fi
-            
-            page=$((page + 1))
-          done
-          
-          # Rename final file
-          mv temp/all_files.json temp/files.json
-
-      - name: Generate metadata.json
+      - name: Fetch and generate metadata with Tree API
         env:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
         run: |
@@ -67,74 +30,240 @@ jobs:
           const fs = require('fs');
           const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
           
-          let files;
-          try {
-            files = JSON.parse(fs.readFileSync('temp/files.json'));
-          } catch(e) {
-            console.error('Error reading files.json:', e);
-            process.exit(1);
-          }
-          
           const token = process.env.GITHUB_TOKEN;
           const repo = process.env.GITHUB_REPOSITORY;
           
+          console.log('=' .repeat(60));
+          console.log('STARTING METADATA GENERATION');
+          console.log('=' .repeat(60));
+          console.log(`Repository: ${repo}`);
+          console.log(`Time: ${new Date().toISOString()}`);
+          console.log('');
+          
           (async () => {
-            const output = [];
-            let processed = 0;
-            const total = files.length;
-            
-            console.log(`Total files found: ${total}`);
-            
-            for (const file of files) {
-              if (!/\.(png|jpe?g|gif|webp|svg)$/i.test(file.name)) continue;
+            try {
+              // Step 1: Get the default branch
+              console.log('📡 Step 1: Getting repository information...');
+              const repoInfo = await fetch(
+                `https://api.github.com/repos/${repo}`,
+                { headers: { 'Authorization': `token ${token}`, 'User-Agent': 'metadata-script' } }
+              ).then(r => r.json());
               
-              processed++;
-              if (processed % 50 === 0) {
-                console.log(`Processing ${processed}/${total}...`);
+              const defaultBranch = repoInfo.default_branch || 'main';
+              console.log(`✅ Default branch: ${defaultBranch}`);
+              console.log('');
+              
+              // Step 2: Get the tree recursively
+              console.log('📡 Step 2: Fetching complete file tree from GitHub...');
+              console.log('   (This may take a moment for large repositories)');
+              
+              const treeResponse = await fetch(
+                `https://api.github.com/repos/${repo}/git/trees/${defaultBranch}?recursive=1`,
+                { headers: { 'Authorization': `token ${token}`, 'User-Agent': 'metadata-script' } }
+              );
+              
+              if (!treeResponse.ok) {
+                throw new Error(`Tree API failed with status ${treeResponse.status}: ${await treeResponse.text()}`);
               }
               
-              // Fetch commits with pagination to get ALL commits if needed
-              let allCommits = [];
-              let commitPage = 1;
-              let hasMore = true;
+              const treeData = await treeResponse.json();
               
-              while (hasMore && allCommits.length < 100) { // Limit to 100 commits maximum
-                const commits = await fetch(`https://api.github.com/repos/${repo}/commits?path=${file.path}&page=${commitPage}&per_page=30`, {
-                  headers: {
-                    Authorization: 'token ' + token,
-                    'User-Agent': 'metadata-script'
-                  }
-                }).then(r => r.json());
+              if (!treeData.tree) {
+                throw new Error('No tree data received from GitHub API');
+              }
+              
+              console.log(`✅ Total files in repository: ${treeData.tree.length}`);
+              console.log('');
+              
+              // Step 3: Filter images in aset folder
+              console.log('🔍 Step 3: Filtering image files in "aset" folder...');
+              
+              const images = treeData.tree.filter(item => {
+                // Must be in aset folder (starting with aset/)
+                if (!item.path.startsWith('aset/')) return false;
+                // Must be a file (has blob type)
+                if (item.type !== 'blob') return false;
+                // Must be an image
+                return /\.(png|jpe?g|gif|webp|svg)$/i.test(item.path);
+              });
+              
+              console.log(`✅ Found ${images.length} image files in aset folder`);
+              console.log('');
+              
+              if (images.length === 0) {
+                console.log('⚠️  No images found. Creating empty metadata file.');
+                fs.writeFileSync('metadata.json', JSON.stringify([], null, 2));
+                return;
+              }
+              
+              // Show sample of found images
+              console.log('📋 Sample of found images (first 5):');
+              images.slice(0, 5).forEach((img, idx) => {
+                console.log(`   ${idx + 1}. ${img.path} (${formatBytes(img.size)})`);
+              });
+              if (images.length > 5) console.log(`   ... and ${images.length - 5} more`);
+              console.log('');
+              
+              // Step 4: Get commit dates with batching
+              console.log('📡 Step 4: Fetching commit dates for each image...');
+              console.log('   (This uses parallel requests for better performance)');
+              
+              const output = [];
+              const batchSize = 30; // Process 30 images at a time to avoid rate limits
+              const totalBatches = Math.ceil(images.length / batchSize);
+              
+              let processed = 0;
+              let rateLimitRemaining = 5000; // Default assumption
+              
+              for (let i = 0; i < images.length; i += batchSize) {
+                const batch = images.slice(i, i + batchSize);
+                const batchNum = Math.floor(i / batchSize) + 1;
                 
-                if (Array.isArray(commits) && commits.length > 0) {
-                  allCommits = allCommits.concat(commits);
-                  commitPage++;
-                  if (commits.length < 30) hasMore = false;
-                } else {
-                  hasMore = false;
+                console.log(`\n🔄 Batch ${batchNum}/${totalBatches} (${batch.length} images)...`);
+                
+                // Check rate limit before batch
+                const rateLimitCheck = await fetch(
+                  'https://api.github.com/rate_limit',
+                  { headers: { 'Authorization': `token ${token}` } }
+                ).then(r => r.json());
+                
+                if (rateLimitCheck.resources?.core?.remaining < 100) {
+                  const resetTime = new Date(rateLimitCheck.resources.core.reset * 1000);
+                  console.log(`⚠️  Rate limit low! Remaining: ${rateLimitCheck.resources.core.remaining}`);
+                  console.log(`   Will reset at: ${resetTime.toLocaleString()}`);
+                  console.log(`   Waiting 60 seconds...`);
+                  await new Promise(resolve => setTimeout(resolve, 60000));
+                }
+                
+                // Process batch in parallel
+                const batchPromises = batch.map(async (file) => {
+                  try {
+                    // Get last commit for this specific file
+                    const commits = await fetch(
+                      `https://api.github.com/repos/${repo}/commits?path=${file.path}&per_page=1&page=1`,
+                      { 
+                        headers: { 
+                          'Authorization': `token ${token}`,
+                          'User-Agent': 'metadata-script'
+                        } 
+                      }
+                    ).then(r => r.json());
+                    
+                    // Check if commits is an array (success) or error object
+                    const lastCommitDate = Array.isArray(commits) && commits.length > 0 
+                      ? commits[0]?.commit?.author?.date 
+                      : null;
+                    
+                    return {
+                      name: file.path.split('/').pop(),
+                      path: file.path,
+                      size: file.size,
+                      extension: file.path.split('.').pop().toLowerCase(),
+                      date: lastCommitDate
+                    };
+                  } catch (err) {
+                    console.log(`   ⚠️  Error fetching commit for ${file.path}: ${err.message}`);
+                    return {
+                      name: file.path.split('/').pop(),
+                      path: file.path,
+                      size: file.size,
+                      extension: file.path.split('.').pop().toLowerCase(),
+                      date: null
+                    };
+                  }
+                });
+                
+                const batchResults = await Promise.all(batchPromises);
+                output.push(...batchResults);
+                
+                processed += batch.length;
+                console.log(`   ✅ Completed ${processed}/${images.length} images`);
+                
+                // Small delay between batches to avoid rate limiting
+                if (i + batchSize < images.length) {
+                  await new Promise(resolve => setTimeout(resolve, 1000));
                 }
               }
               
-              const latest = allCommits[0];
-              output.push({
-                name: file.name,
-                path: file.path,
-                size: file.size,
-                extension: file.name.split('.').pop(),
-                date: latest?.commit?.author?.date || null
+              console.log('\n' + '='.repeat(60));
+              console.log('📊 GENERATION SUMMARY');
+              console.log('='.repeat(60));
+              console.log(`✅ Total images processed: ${output.length}`);
+              console.log(`✅ Total size of metadata: ${formatBytes(JSON.stringify(output).length)}`);
+              
+              const withDates = output.filter(img => img.date !== null).length;
+              const withoutDates = output.filter(img => img.date === null).length;
+              console.log(`📅 Images with commit date: ${withDates}`);
+              console.log(`❓ Images without commit date: ${withoutDates}`);
+              
+              // Calculate total size
+              const totalSize = output.reduce((sum, img) => sum + img.size, 0);
+              console.log(`💾 Total size of all images: ${formatBytes(totalSize)}`);
+              
+              // Show file type breakdown
+              const extensions = {};
+              output.forEach(img => {
+                extensions[img.extension] = (extensions[img.extension] || 0) + 1;
               });
+              console.log('\n📁 File type breakdown:');
+              Object.entries(extensions).forEach(([ext, count]) => {
+                console.log(`   .${ext}: ${count} files`);
+              });
+              
+              // Step 5: Save metadata.json
+              console.log('\n💾 Step 5: Saving metadata.json...');
+              fs.writeFileSync('metadata.json', JSON.stringify(output, null, 2));
+              console.log('✅ metadata.json saved successfully!');
+              
+              // Step 6: Create a summary log file
+              const summary = {
+                generated_at: new Date().toISOString(),
+                repository: repo,
+                total_images: output.length,
+                total_size_bytes: totalSize,
+                images_with_dates: withDates,
+                images_without_dates: withoutDates,
+                file_types: extensions,
+                sample_images: output.slice(0, 10)
+              };
+              fs.writeFileSync('metadata_summary.json', JSON.stringify(summary, null, 2));
+              console.log('✅ metadata_summary.json saved for reference');
+              
+              console.log('\n✨ METADATA GENERATION COMPLETE! ✨');
+              
+            } catch (error) {
+              console.error('\n❌ ERROR:', error.message);
+              console.error(error.stack);
+              process.exit(1);
             }
-            
-            console.log(`Generated metadata for ${output.length} images`);
-            fs.writeFileSync('metadata.json', JSON.stringify(output, null, 2));
           })();
+          
+          function formatBytes(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+          }
           EOF
 
-      - name: Commit metadata.json
+      - name: Display metadata preview
+        run: |
+          echo "=========================================="
+          echo "METADATA PREVIEW (First 10 images)"
+          echo "=========================================="
+          echo ""
+          cat metadata.json | jq -r '.[:10][] | "📷 \(.name)\n   Path: \(.path)\n   Size: \(.size) bytes\n   Date: \(.date // "Unknown")\n"'
+          echo ""
+          echo "=========================================="
+          echo "TOTAL IMAGES: $(cat metadata.json | jq 'length')"
+          echo "=========================================="
+
+      - name: Commit metadata files
         run: |
           git config user.name "iceinstitut"
           git config user.email "iceinstitut@users.noreply.github.com"
-          git add metadata.json
-          git commit -m "Update metadata.json" || echo "Nothing to commit"
+          git add metadata.json metadata_summary.json
+          git commit -m "Update metadata ($(date -u '+%Y-%m-%d %H:%M:%S UTC')) - Total images: $(cat metadata.json | jq 'length')" || echo "Nothing to commit"
           git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git push origin main
