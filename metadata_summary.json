@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-07T23:08:19.171Z",
+  "generated_at": "2026-05-08T23:06:01.966Z",
   "repository": "iceinstitut/image",
   "total_images": 3523,
   "total_size_bytes": 388424440,
-  "images_with_dates": 3014,
-  "images_without_dates": 509,
+  "images_with_dates": 3251,
+  "images_without_dates": 272,
   "file_types": {
     "jpg": 188,
     "png": 3285,
