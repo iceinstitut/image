@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-05-11T23:06:02.362Z",
+  "generated_at": "2026-05-12T23:12:58.025Z",
   "repository": "iceinstitut/image",
-  "total_images": 3523,
-  "total_size_bytes": 388424440,
-  "images_with_dates": 2651,
-  "images_without_dates": 872,
+  "total_images": 3524,
+  "total_size_bytes": 388438829,
+  "images_with_dates": 2895,
+  "images_without_dates": 629,
   "file_types": {
     "jpg": 188,
-    "png": 3285,
+    "png": 3286,
     "svg": 9,
     "webp": 26,
     "jpeg": 13,
@@ -20,6 +20,13 @@
       "size": 72980,
       "extension": "jpg",
       "date": "2025-08-30T06:48:59Z"
+    },
+    {
+      "name": "3 Logo Musowwir Simbol.png",
+      "path": "aset/3 Logo Musowwir Simbol.png",
+      "size": 14389,
+      "extension": "png",
+      "date": "2026-05-12T15:29:02Z"
     },
     {
       "name": "CAO Zian.png",
@@ -76,13 +83,6 @@
       "size": 264208,
       "extension": "jpg",
       "date": "2025-12-29T15:00:13Z"
-    },
-    {
-      "name": "Illustration of people studying independently with laptops_cellphones at flexible times..jpg",
-      "path": "aset/Illustration of people studying independently with laptops_cellphones at flexible times..jpg",
-      "size": 205403,
-      "extension": "jpg",
-      "date": "2025-12-29T14:57:03Z"
     }
   ]
 }
