@@ -203,6 +203,13 @@
     "date": "2025-10-09T09:04:44Z"
   },
   {
+    "name": "anhui_water_conservancy_technical_college.webp",
+    "path": "aset/anhui_water_conservancy_technical_college.webp",
+    "size": 38350,
+    "extension": "webp",
+    "date": "2026-08-06T07:29:55Z"
+  },
+  {
     "name": "bohai_ship-building_vocational_college.webp",
     "path": "aset/bohai_ship-building_vocational_college.webp",
     "size": 19074,
@@ -264,6 +271,13 @@
     "size": 43526,
     "extension": "png",
     "date": "2025-08-26T16:03:47Z"
+  },
+  {
+    "name": "guizhou_vocational_technology_institute.webp",
+    "path": "aset/guizhou_vocational_technology_institute.webp",
+    "size": 57812,
+    "extension": "webp",
+    "date": "2026-08-06T07:29:55Z"
   },
   {
     "name": "ice-institute-logo-banner.png",
@@ -6290,14 +6304,14 @@
     "path": "aset/logo_henan_vocational_college_of_agriculture_full.png",
     "size": 26190,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_henan_vocational_college_of_agriculture_simbol.png",
     "path": "aset/logo_henan_vocational_college_of_agriculture_simbol.png",
     "size": 13620,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_henan_vocational_college_of_applied_technology_full.png",
@@ -9020,7 +9034,7 @@
     "path": "aset/logo_kasetsart_university.png",
     "size": 28521,
     "extension": "png",
-    "date": null
+    "date": "2026-04-15T17:38:35Z"
   },
   {
     "name": "logo_kazan_federal_university.png",
@@ -9034,14 +9048,14 @@
     "path": "aset/logo_kering_full.png",
     "size": 5070,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_kering_simbol.png",
     "path": "aset/logo_kering_simbol.png",
     "size": 5070,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_khwopa_engineering_college.jpg",
@@ -9076,14 +9090,14 @@
     "path": "aset/logo_kskj_simbol.png",
     "size": 23454,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_kunming_city_college.jpg",
     "path": "aset/logo_kunming_city_college.jpg",
     "size": 29002,
     "extension": "jpg",
-    "date": null
+    "date": "2026-04-15T17:05:20Z"
   },
   {
     "name": "logo_kunming_medical_university_full.png",
@@ -9097,21 +9111,21 @@
     "path": "aset/logo_kunming_medical_university_haiyuan_college_full.png",
     "size": 42820,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_kunming_medical_university_haiyuan_college_simbol.png",
     "path": "aset/logo_kunming_medical_university_haiyuan_college_simbol.png",
     "size": 15316,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_kunming_medical_university_simbol.png",
     "path": "aset/logo_kunming_medical_university_simbol.png",
     "size": 8850,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_kunming_metallurgy_college_full.png",
@@ -9125,21 +9139,21 @@
     "path": "aset/logo_kunming_metallurgy_college_simbol.png",
     "size": 9352,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_kunming_university_of_science_and_technology_full.png",
     "path": "aset/logo_kunming_university_of_science_and_technology_full.png",
     "size": 90912,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_kunming_university_of_science_and_technology_simbol.png",
     "path": "aset/logo_kunming_university_of_science_and_technology_simbol.png",
     "size": 31626,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_kunsan_national_universiy.webp",
@@ -9153,7 +9167,7 @@
     "path": "aset/logo_kyung_hee_university_full.png",
     "size": 15712,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_kyung_hee_university_simbol.png",
@@ -9167,7 +9181,7 @@
     "path": "aset/logo_langfang_mass_art_museum_full.png",
     "size": 163384,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_langfang_mass_art_museum_simbol.png",
@@ -9181,63 +9195,63 @@
     "path": "aset/logo_lanka_education_and_research_network.png",
     "size": 71492,
     "extension": "png",
-    "date": null
+    "date": "2026-04-15T17:05:20Z"
   },
   {
     "name": "logo_lanzhou_city_university_full.png",
     "path": "aset/logo_lanzhou_city_university_full.png",
     "size": 24786,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_lanzhou_city_university_simbol.png",
     "path": "aset/logo_lanzhou_city_university_simbol.png",
     "size": 9664,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_lanzhou_modern_vocational_college_full.png",
     "path": "aset/logo_lanzhou_modern_vocational_college_full.png",
     "size": 30195,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_lanzhou_modern_vocational_college_simbol.png",
     "path": "aset/logo_lanzhou_modern_vocational_college_simbol.png",
     "size": 15257,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_lanzhou_university_full.png",
     "path": "aset/logo_lanzhou_university_full.png",
     "size": 72060,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_lanzhou_university_of_arts_and_science.png",
     "path": "aset/logo_lanzhou_university_of_arts_and_science.png",
     "size": 158337,
     "extension": "png",
-    "date": null
+    "date": "2026-04-15T17:05:20Z"
   },
   {
     "name": "logo_lanzhou_university_of_finance_and_economics_full.png",
     "path": "aset/logo_lanzhou_university_of_finance_and_economics_full.png",
     "size": 100322,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_lanzhou_university_of_finance_and_economics_simbol.png",
     "path": "aset/logo_lanzhou_university_of_finance_and_economics_simbol.png",
     "size": 32581,
     "extension": "png",
-    "date": null
+    "date": "2026-04-13T16:19:29Z"
   },
   {
     "name": "logo_lanzhou_university_of_resources_and_environment_full.png",
@@ -15320,7 +15334,7 @@
     "path": "aset/logo_sichuan_cultural_industry_vocational_college.jpg",
     "size": 38662,
     "extension": "jpg",
-    "date": "2026-04-15T17:05:20Z"
+    "date": null
   },
   {
     "name": "logo_sichuan_engineering_technical_college_simbol.png",
@@ -15355,14 +15369,14 @@
     "path": "aset/logo_sichuan_minzu_college_full.png",
     "size": 13994,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_sichuan_minzu_college_simbol.png",
     "path": "aset/logo_sichuan_minzu_college_simbol.png",
     "size": 4904,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_sichuan_normal_university_full.png",
@@ -15376,7 +15390,7 @@
     "path": "aset/logo_sichuan_normal_university_simbol.png",
     "size": 39645,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_sichuan_polytechnic_university_full.png",
@@ -15390,28 +15404,28 @@
     "path": "aset/logo_sichuan_polytechnic_university_simbol.png",
     "size": 12730,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_sichuan_tourism_university_full.png",
     "path": "aset/logo_sichuan_tourism_university_full.png",
     "size": 9195,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_sichuan_tourism_university_simbol.png",
     "path": "aset/logo_sichuan_tourism_university_simbol.png",
     "size": 13632,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_sichuan_university_full.png",
     "path": "aset/logo_sichuan_university_full.png",
     "size": 50505,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_sichuan_university_of_science_&_engineering_full.png",
@@ -15432,14 +15446,14 @@
     "path": "aset/logo_sichuan_university_simbol.png",
     "size": 17216,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_sichuan_unversity_of_culture_and_arts.webp",
     "path": "aset/logo_sichuan_unversity_of_culture_and_arts.webp",
     "size": 31182,
     "extension": "webp",
-    "date": "2026-04-16T14:55:42Z"
+    "date": null
   },
   {
     "name": "logo_sichuan_vocational_college_of_cultural_industries_full.png",
@@ -15460,7 +15474,7 @@
     "path": "aset/logo_sichuan_vocational_college_of_health_and_rehabilitation_full.png",
     "size": 160058,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_sichuan_vocational_college_of_health_and_rehabilitation_simbol.png",
@@ -15481,63 +15495,63 @@
     "path": "aset/logo_soochow_university_simbol.png",
     "size": 61478,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_south-central_minzu_university.png",
     "path": "aset/logo_south-central_minzu_university.png",
     "size": 29063,
     "extension": "png",
-    "date": "2026-02-14T17:23:19Z"
+    "date": null
   },
   {
     "name": "logo_south-central_minzu_university_full.png",
     "path": "aset/logo_south-central_minzu_university_full.png",
     "size": 146643,
     "extension": "png",
-    "date": "2026-04-13T12:31:41Z"
+    "date": null
   },
   {
     "name": "logo_south-central_minzu_university_simbol.png",
     "path": "aset/logo_south-central_minzu_university_simbol.png",
     "size": 29063,
     "extension": "png",
-    "date": "2026-04-13T12:31:41Z"
+    "date": null
   },
   {
     "name": "logo_south_china_agricultural_university_full.png",
     "path": "aset/logo_south_china_agricultural_university_full.png",
     "size": 81708,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_south_china_agricultural_university_simbol.png",
     "path": "aset/logo_south_china_agricultural_university_simbol.png",
     "size": 11687,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_south_china_normal_university_full.png",
     "path": "aset/logo_south_china_normal_university_full.png",
     "size": 81770,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_south_china_normal_university_simbol.png",
     "path": "aset/logo_south_china_normal_university_simbol.png",
     "size": 40524,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_south_china_university_of_technology_full.png",
     "path": "aset/logo_south_china_university_of_technology_full.png",
     "size": 28295,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_south_china_university_of_technology_simbol.png",
@@ -15593,7 +15607,7 @@
     "path": "aset/logo_southern_university_of_science_and_technology_simbol.png",
     "size": 24991,
     "extension": "png",
-    "date": "2026-04-13T16:19:29Z"
+    "date": null
   },
   {
     "name": "logo_southwest_forestry_university_full.png",
@@ -18260,224 +18274,224 @@
     "path": "aset/logo_universitas_hasanuddin.png",
     "size": 932554,
     "extension": "png",
-    "date": null
+    "date": "2026-04-16T14:55:42Z"
   },
   {
     "name": "logo_universitas_hasyim_asy'ari_tebuireng_jombang.png",
     "path": "aset/logo_universitas_hasyim_asy'ari_tebuireng_jombang.png",
     "size": 186761,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T10:39:39Z"
   },
   {
     "name": "logo_universitas_hayam_wuruk_perbanas.png",
     "path": "aset/logo_universitas_hayam_wuruk_perbanas.png",
     "size": 193370,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T14:17:30Z"
   },
   {
     "name": "logo_universitas_hindu_indonesia.png",
     "path": "aset/logo_universitas_hindu_indonesia.png",
     "size": 27238,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T10:39:39Z"
   },
   {
     "name": "logo_universitas_hindu_negeri_i_gusti_bagus_sugriwa_denpasar.png",
     "path": "aset/logo_universitas_hindu_negeri_i_gusti_bagus_sugriwa_denpasar.png",
     "size": 104554,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T13:00:46Z"
   },
   {
     "name": "logo_universitas_hkbp_nommensen.png",
     "path": "aset/logo_universitas_hkbp_nommensen.png",
     "size": 119840,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T14:17:30Z"
   },
   {
     "name": "logo_universitas_hkbp_nommensen_pematangsiantar.png",
     "path": "aset/logo_universitas_hkbp_nommensen_pematangsiantar.png",
     "size": 66462,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T14:17:30Z"
   },
   {
     "name": "logo_universitas_ibn_khaldun_bogor.png",
     "path": "aset/logo_universitas_ibn_khaldun_bogor.png",
     "size": 307120,
     "extension": "png",
-    "date": null
+    "date": "2026-04-15T17:05:20Z"
   },
   {
     "name": "logo_universitas_ibnu_chaldun.png",
     "path": "aset/logo_universitas_ibnu_chaldun.png",
     "size": 22752,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T10:39:39Z"
   },
   {
     "name": "logo_universitas_ibnu_sina.png",
     "path": "aset/logo_universitas_ibnu_sina.png",
     "size": 43933,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T14:17:30Z"
   },
   {
     "name": "logo_universitas_ibrahimy.png",
     "path": "aset/logo_universitas_ibrahimy.png",
     "size": 277911,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T10:39:39Z"
   },
   {
     "name": "logo_universitas_ichsan_gorontalo.jpg",
     "path": "aset/logo_universitas_ichsan_gorontalo.jpg",
     "size": 18320,
     "extension": "jpg",
-    "date": null
+    "date": "2026-04-16T14:55:42Z"
   },
   {
     "name": "logo_universitas_indonesia_maju.png",
     "path": "aset/logo_universitas_indonesia_maju.png",
     "size": 226946,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T10:39:39Z"
   },
   {
     "name": "logo_universitas_indonesia_mandiri.png",
     "path": "aset/logo_universitas_indonesia_mandiri.png",
     "size": 155420,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T10:39:39Z"
   },
   {
     "name": "logo_universitas_indonesia_membangun.png",
     "path": "aset/logo_universitas_indonesia_membangun.png",
     "size": 61627,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T10:39:39Z"
   },
   {
     "name": "logo_universitas_indonesia_timur.png",
     "path": "aset/logo_universitas_indonesia_timur.png",
     "size": 36722,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T10:39:39Z"
   },
   {
     "name": "logo_universitas_indraprasta_pgri.png",
     "path": "aset/logo_universitas_indraprasta_pgri.png",
     "size": 279996,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T14:17:30Z"
   },
   {
     "name": "logo_universitas_informatika_dan_bisnis_indonesia.png",
     "path": "aset/logo_universitas_informatika_dan_bisnis_indonesia.png",
     "size": 197825,
     "extension": "png",
-    "date": null
+    "date": "2026-04-15T17:05:20Z"
   },
   {
     "name": "logo_universitas_insan_budi_utomo.png",
     "path": "aset/logo_universitas_insan_budi_utomo.png",
     "size": 292906,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T10:39:39Z"
   },
   {
     "name": "logo_universitas_insan_cendekia_mandiri.png",
     "path": "aset/logo_universitas_insan_cendekia_mandiri.png",
     "size": 57444,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T10:39:39Z"
   },
   {
     "name": "logo_universitas_insan_cita_indonesia.png",
     "path": "aset/logo_universitas_insan_cita_indonesia.png",
     "size": 79939,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T14:17:30Z"
   },
   {
     "name": "logo_universitas_insan_pembangunan_indonesia.jpg",
     "path": "aset/logo_universitas_insan_pembangunan_indonesia.jpg",
     "size": 16164,
     "extension": "jpg",
-    "date": null
+    "date": "2026-04-16T14:55:42Z"
   },
   {
     "name": "logo_universitas_internasional_batam.png",
     "path": "aset/logo_universitas_internasional_batam.png",
     "size": 6971,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T14:17:30Z"
   },
   {
     "name": "logo_universitas_internasional_jakarta.png",
     "path": "aset/logo_universitas_internasional_jakarta.png",
     "size": 36058,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T10:39:39Z"
   },
   {
     "name": "logo_universitas_internasional_semen_indonesia.png",
     "path": "aset/logo_universitas_internasional_semen_indonesia.png",
     "size": 44758,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T14:17:30Z"
   },
   {
     "name": "logo_universitas_ipwija.jpg",
     "path": "aset/logo_universitas_ipwija.jpg",
     "size": 12525,
     "extension": "jpg",
-    "date": null
+    "date": "2026-04-15T17:05:20Z"
   },
   {
     "name": "logo_universitas_iqra_buru.png",
     "path": "aset/logo_universitas_iqra_buru.png",
     "size": 41274,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T14:17:30Z"
   },
   {
     "name": "logo_universitas_islam_45.png",
     "path": "aset/logo_universitas_islam_45.png",
     "size": 150273,
     "extension": "png",
-    "date": null
+    "date": "2026-04-15T17:05:20Z"
   },
   {
     "name": "logo_universitas_islam_al-ihya_kuningan.png",
     "path": "aset/logo_universitas_islam_al-ihya_kuningan.png",
     "size": 208246,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T10:39:39Z"
   },
   {
     "name": "logo_universitas_islam_as-syafiiyah.png",
     "path": "aset/logo_universitas_islam_as-syafiiyah.png",
     "size": 111888,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T10:39:39Z"
   },
   {
     "name": "logo_universitas_islam_balitar.png",
     "path": "aset/logo_universitas_islam_balitar.png",
     "size": 69743,
     "extension": "png",
-    "date": null
+    "date": "2026-04-12T10:39:39Z"
   },
   {
     "name": "logo_universitas_islam_bandung.png",
     "path": "aset/logo_universitas_islam_bandung.png",
     "size": 137819,
     "extension": "png",
-    "date": null
+    "date": "2026-04-15T17:05:20Z"
   },
   {
     "name": "logo_universitas_islam_batik.png",
@@ -24560,42 +24574,42 @@
     "path": "aset/pengembanganmkdaring_lo_infografis.jpg",
     "size": 124833,
     "extension": "jpg",
-    "date": "2026-04-25T17:39:09Z"
+    "date": null
   },
   {
     "name": "pengembanganmkdaring_numerical_input_with_hints_and_feedback.jpg",
     "path": "aset/pengembanganmkdaring_numerical_input_with_hints_and_feedback.jpg",
     "size": 23951,
     "extension": "jpg",
-    "date": "2026-04-27T09:29:52Z"
+    "date": null
   },
   {
     "name": "pengembanganmkdaring_numerical_input_with_hints_and_feedback.png",
     "path": "aset/pengembanganmkdaring_numerical_input_with_hints_and_feedback.png",
     "size": 1209691,
     "extension": "png",
-    "date": "2026-04-27T12:06:44Z"
+    "date": null
   },
   {
     "name": "pengembanganmkdaring_skala_pengukuran_menurut_kirkpatrick.png",
     "path": "aset/pengembanganmkdaring_skala_pengukuran_menurut_kirkpatrick.png",
     "size": 12105,
     "extension": "png",
-    "date": "2026-04-25T17:39:09Z"
+    "date": null
   },
   {
     "name": "pengembanganmkdaring_taksonomi_bloom_digital.jpg",
     "path": "aset/pengembanganmkdaring_taksonomi_bloom_digital.jpg",
     "size": 180095,
     "extension": "jpg",
-    "date": "2026-04-25T17:39:09Z"
+    "date": null
   },
   {
     "name": "pengembanganmkdaring_tampilan_akses_pengaturan_grading.png",
     "path": "aset/pengembanganmkdaring_tampilan_akses_pengaturan_grading.png",
     "size": 71421,
     "extension": "png",
-    "date": "2026-04-27T09:29:52Z"
+    "date": null
   },
   {
     "name": "pengembanganmkdaring_tiga_jenis_umpan_balik.png",
@@ -24609,28 +24623,28 @@
     "path": "aset/pengembanganmkdaring_tingkat_evaluasi_kedua.png",
     "size": 24226,
     "extension": "png",
-    "date": "2026-04-25T17:39:09Z"
+    "date": null
   },
   {
     "name": "pengembanganmkdaring_tingkat_evaluasi_keempat.png",
     "path": "aset/pengembanganmkdaring_tingkat_evaluasi_keempat.png",
     "size": 19967,
     "extension": "png",
-    "date": "2026-04-25T17:39:09Z"
+    "date": null
   },
   {
     "name": "pengembanganmkdaring_tingkat_evaluasi_ketiga.png",
     "path": "aset/pengembanganmkdaring_tingkat_evaluasi_ketiga.png",
     "size": 22382,
     "extension": "png",
-    "date": "2026-04-25T17:39:09Z"
+    "date": null
   },
   {
     "name": "pengembanganmkdaring_tingkat_evaluasi_pertama.png",
     "path": "aset/pengembanganmkdaring_tingkat_evaluasi_pertama.png",
     "size": 20143,
     "extension": "png",
-    "date": "2026-04-25T17:39:09Z"
+    "date": null
   },
   {
     "name": "southwestern-university-of-finance-and-economics.png",
@@ -24644,41 +24658,41 @@
     "path": "aset/sub-brand-micro.png",
     "size": 46579,
     "extension": "png",
-    "date": "2025-07-13T03:38:04Z"
+    "date": null
   },
   {
     "name": "technics_publications_logo.jpg",
     "path": "aset/technics_publications_logo.jpg",
     "size": 6052,
     "extension": "jpg",
-    "date": "2026-05-26T18:37:11Z"
+    "date": null
   },
   {
     "name": "whizlabs.png",
     "path": "aset/whizlabs.png",
     "size": 60653,
     "extension": "png",
-    "date": "2025-08-17T15:47:13Z"
+    "date": null
   },
   {
     "name": "wuhan-institute-of-physical-education.png",
     "path": "aset/wuhan-institute-of-physical-education.png",
     "size": 11035,
     "extension": "png",
-    "date": "2025-08-17T15:47:13Z"
+    "date": null
   },
   {
     "name": "xinjian-industry-technical-college.jpeg",
     "path": "aset/xinjian-industry-technical-college.jpeg",
     "size": 71258,
     "extension": "jpeg",
-    "date": "2025-08-17T15:47:13Z"
+    "date": null
   },
   {
     "name": "zhenfund.jpeg",
     "path": "aset/zhenfund.jpeg",
     "size": 16820,
     "extension": "jpeg",
-    "date": "2025-08-17T15:47:13Z"
+    "date": null
   }
 ]
